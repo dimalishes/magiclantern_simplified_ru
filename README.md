@@ -1,4 +1,4 @@
-# Magic Lantern RU — dimalishes
+# Magic Lantern RU
 
 Русификация Magic Lantern для Canon EOS 5D Mark II / Canon 2.1.2.
 
@@ -7,8 +7,15 @@
 База: `ed3e7c0dfacfdeaf3349dee73edf9e3621217462`. Лицензия и авторство Magic Lantern сохранены.
 Другие модели с русификацией пока не проверялись.
 
----
+## Скачать
 
+Только для **Canon EOS 5D Mark II с прошивкой Canon 2.1.2**.
+
+- [Обновление установленной Magic Lantern](https://github.com/dimalishes/magiclantern_simplified_ru/releases/download/2026-10-28_5D2_ru.212/2026-10-28_5D2_ru.212_update.zip)
+- [Чистая установка](https://github.com/dimalishes/magiclantern_simplified_ru/releases/download/2026-10-28_5D2_ru.212/2026-10-28_5D2_ru.212_clean_install.zip)
+- [Все выпуски и инструкции](https://github.com/dimalishes/magiclantern_simplified_ru/releases)
+
+---
 Magic Lantern
 =============
 
