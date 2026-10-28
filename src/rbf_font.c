@@ -229,7 +229,7 @@ static inline int rbf_font_height(font *rbf_font) {
 }
 //-------------------------------------------------------------------
 static inline int rbf_char_width(font *rbf_font, int ch) {
-    return rbf_font->wTable[ch];
+    return (unsigned char)rbf_font->wTable[(unsigned char)ch];
 }
 
 //-------------------------------------------------------------------
@@ -352,6 +352,7 @@ static void FAST font_draw_char_shadow(font *rbf_font, int x, int y, char *cdata
 
 //-------------------------------------------------------------------
 static int FAST rbf_draw_char(font *rbf_font, int x, int y, int ch, int fontspec) {
+    ch = (unsigned char)ch;
     // Get char data pointer
     char* cdata = rbf_font_char(rbf_font, ch);
     

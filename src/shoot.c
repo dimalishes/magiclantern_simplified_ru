@@ -74,6 +74,7 @@ void intervalometer_stop();
 void wait_till_next_second();
 void zoom_sharpen_step();
 int take_fast_pictures( int number );
+static int take_fast_pictures_ex(int number, int interval_capture, int *pictures_taken);
 
 #if  !defined(AUDIO_REM_SHOT_POS_X) && !defined(AUDIO_REM_SHOT_POS_Y)
     #define AUDIO_REM_SHOT_POS_X 20
@@ -5639,11 +5640,25 @@ int is_continuous_drive()
         );
 }
 
-int take_fast_pictures( int number )
+/* The intervalometer must remain interruptible inside a no-delay batch.
+ * Other callers retain the original capture behaviour. */
+static int interval_capture_canceled(int interval_capture)
+{
+    return interval_capture &&
+        (!intervalometer_running || !interval_enabled || gui_menu_shown() || ml_shutdown_requested);
+}
+
+static int take_fast_pictures_ex(int number, int interval_capture, int *pictures_taken)
 {
     AcquireRecursiveLock(shoot_task_rlock, 0);
 
     int canceled = 0;
+    if (pictures_taken) *pictures_taken = 0;
+    if (interval_capture_canceled(interval_capture))
+    {
+        ReleaseRecursiveLock(shoot_task_rlock);
+        return 1;
+    }
     // take fast pictures
 #ifdef CONFIG_PROP_REQUEST_CHANGE
     if ( number > 1 && is_continuous_drive() && !is_bulb_mode() && !snap_sim)
@@ -5652,15 +5667,19 @@ int take_fast_pictures( int number )
         
         // continuous mode - simply hold shutter pressed 
         int f0 = get_shooting_card()->file_number;
-        SW1(1,100);
-        SW2(1,100);
+        if (!interval_capture_canceled(interval_capture)) SW1(1,100);
+        if (!interval_capture_canceled(interval_capture)) SW2(1,100);
         while (get_halfshutter_pressed() &&
-               DCIM_WRAP(f0 + number - get_shooting_card()->file_number + 10) > 10)
+               DCIM_WRAP(f0 + number - get_shooting_card()->file_number + 10) > 10 &&
+               !interval_capture_canceled(interval_capture))
         {
             msleep(10);
         }
+        canceled = interval_capture_canceled(interval_capture);
         SW2(0,100);
         SW1(0,100);
+        if (pictures_taken)
+            *pictures_taken = MOD(get_shooting_card()->file_number - f0, 9999);
 
         #if defined(CONFIG_7D)
         /* on EOS 7D the code to trigger SW1/SW2 is buggy that the metering somehow locks up.
@@ -5679,13 +5698,24 @@ int take_fast_pictures( int number )
     {
         for (int i = 0; i < number; i++)
         {
+            if (interval_capture_canceled(interval_capture))
+            {
+                canceled = 1;
+                break;
+            }
             canceled = take_a_pic(shoot_use_af ? AF_ENABLE : AF_DISABLE);
             if(canceled) break;
+            if (pictures_taken) (*pictures_taken)++;
         }
     }
 
     ReleaseRecursiveLock(shoot_task_rlock);
     return canceled;
+}
+
+int take_fast_pictures(int number)
+{
+    return take_fast_pictures_ex(number, 0, NULL);
 }
 
 #ifdef FEATURE_MOTION_DETECT
@@ -6447,10 +6477,11 @@ shoot_task( void* unused )
             if (gui_menu_shown() || get_halfshutter_pressed()) continue;
 
             /* last second - try to get slightly better timing */
-            while (SECONDS_REMAINING > 0)
+            while (SECONDS_REMAINING > 0 && !interval_capture_canceled(1))
             {
                 msleep(10);
             }
+            if (interval_capture_canceled(1)) continue;
 
             int dt = get_interval_time();
             int seconds_clock = get_seconds_clock();
@@ -6462,11 +6493,11 @@ shoot_task( void* unused )
             mlu_step(); // who knows who has the idea of changing drive mode with intervalometer active :)
             #endif
             int canceled = 0;
-            if (dt == 0) // crazy mode - needs to be fast
+            int pictures_taken = 1;
+            if (dt == 0) // no delay, but still respond to stop/menu/shutdown
             {
                 int num = interval_stop_after ? interval_stop_after : 9000;
-                canceled = take_fast_pictures(num);
-                intervalometer_pictures_taken += num - 1;
+                canceled = take_fast_pictures_ex(num, 1, &pictures_taken);
             }
             else if (is_hdr_bracketing_enabled())
             {
@@ -6475,9 +6506,10 @@ shoot_task( void* unused )
             else
             {
                 // count this as 1 picture
-                canceled = take_fast_pictures(pics_to_take_at_once+1);
+                canceled = take_fast_pictures_ex(pics_to_take_at_once+1, 1, &pictures_taken);
             }
-            
+
+            intervalometer_pictures_taken += pictures_taken;
             if(canceled)
                 intervalometer_stop();
             
@@ -6486,8 +6518,6 @@ shoot_task( void* unused )
             {
                 NotifyBox(5000, "Interval time too short (%ds)", overrun);
             }
-            intervalometer_pictures_taken++;
-            
             #ifdef CONFIG_MODULES
             auto_ettr_intervalometer_wait();
             module_exec_cbr(CBR_INTERVALOMETER);

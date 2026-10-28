@@ -116,6 +116,18 @@ static int menu_flags_load_dirty = 1;
 static int menu_zebras_mirror_dirty = 0; // to clear zebras from mirror (avoids display artifacts if, for example, you enable false colors in menu, then you disable them, and preview LV)
 
 int menu_help_active = 0; // also used in menuhelp.c
+#ifdef CONFIG_MENU_RU
+CONFIG_INT("menu.language.ru", menu_language_ru, 1);
+static struct menu_entry menu_language_entries[] = {
+    {
+        .name = "Menu language",
+        .priv = &menu_language_ru,
+        .max = 1,
+        .choices = (const char *[]) {"English", "Russian"},
+        .help = "Display language. Internal menu names stay in English.",
+    },
+};
+#endif
 int menu_redraw_blocked = 0; // also used in flexinfo
 static int menu_redraw_cancel = 0;
 
@@ -2330,7 +2342,7 @@ static void pickbox_draw(struct menu_entry * entry, int x0, int y0)
     int w = 100;
     for (int i = lo; i <= hi; i++)
     {
-        w = MAX(w, font_large.width * strlen(pickbox_string(entry, i)));
+        w = MAX(w, bmp_string_width(fnt, pickbox_string(entry, i)));
     }
 
     // don't draw the pickbox out of the screen
@@ -2358,7 +2370,7 @@ static void pickbox_draw(struct menu_entry * entry, int x0, int y0)
         int y = y0 + (i-lo) * 32;
         if (i == sel)
             selection_bar_backend(MENU_BAR_COLOR, 45, x0-16, y, w, 32);
-        bmp_printf(fnt, x0, y, pickbox_string(entry, i));
+        bmp_printf(fnt, x0, y, "%s", pickbox_string(entry, i));
     }
     
     /*
@@ -2385,6 +2397,38 @@ static void menu_clean_footer()
     bmp_fill(bgu, 0, 480-h, 720, h);
 }
 
+static void menu_parent_disabled_warning(char *warning, const char *name)
+{
+    size_t len = strlen(name);
+    snprintf(warning, MENU_MAX_WARNING_LEN, "%s %s disabled.",
+             name, len && name[len-1] == 's' ? "are" : "is");
+#ifdef CONFIG_MENU_RU
+    /* Keep existing exact translations (e.g. Magic Zoom is disabled.). */
+    if (bmp_translate_string(FONT_MED, warning) != warning) return;
+    const char *disabled = bmp_translate_string(FONT_MED, "Disabled");
+    if (strcmp(disabled, "Disabled"))
+    {
+        snprintf(warning, MENU_MAX_WARNING_LEN, "%s: %s.", disabled,
+                 bmp_translate_string(FONT_MED, name));
+    }
+#endif
+}
+
+static void menu_build_choice_help(struct menu_entry *entry, char *buffer, size_t capacity)
+{
+    if (!capacity) return;
+    buffer[0] = 0;
+    for (int i = entry->min; i <= entry->max; i++)
+    {
+        if (bmp_string_width(FONT_MED, buffer) > 700) break;
+        size_t used = strlen(buffer);
+        if (used >= capacity - 1) break;
+        const char *choice = bmp_translate_string(FONT_MED, pickbox_string(entry, i));
+        snprintf(buffer + used, capacity - used, "%s%s", choice,
+                 i < entry->max ? " / " : ".");
+    }
+}
+
 static int check_default_warnings(struct menu_entry * entry, char* warning)
 {
     warning[0] = 0;
@@ -2397,8 +2441,7 @@ static int check_default_warnings(struct menu_entry * entry, char* warning)
         {
             if (!MENU_INT(entry->parent))   /* is the master menu entry disabled? if so, gray out the entire submenu */
             {
-                int is_plural = entry->parent->name[strlen(entry->parent->name)-1] == 's';
-                snprintf(warning, MENU_MAX_WARNING_LEN, "%s %s disabled.", entry->parent->name, is_plural ? "are" : "is");
+                menu_parent_disabled_warning(warning, entry->parent->name);
                 return MENU_WARN_NOT_WORKING;
             }
         }
@@ -2660,6 +2703,16 @@ entry_default_display_info(
     }
 }
 
+/* An empty update buffer must not suppress the entry's per-choice help. */
+static char *menu_secondary_help(char *primary, char *override,
+                                 const char *choices, int index,
+                                 char buffer[MENU_MAX_HELP_LEN])
+{
+    if (override && override[0] && primary != override) return override;
+    if (choices) return menu_help_get_line(choices, index, buffer);
+    return 0;
+}
+
 static inline int get_customize_color()
 {
     return COLOR_DARK_ORANGE_MOD;
@@ -2679,7 +2732,12 @@ static void display_customize_marker(struct menu_entry * entry, int x, int y)
 static void print_help_line(int color, int x, int y, char* msg)
 {
     int fnt = FONT(FONT_MED, color, MENU_BG_COLOR_HEADER_FOOTER);
-    int len = bmp_string_width(fnt, msg);
+    const char *display = msg;
+#ifdef CONFIG_MENU_RU
+    char translated[128];
+    display = bmp_translate_config_message(fnt, msg, translated, sizeof(translated));
+#endif
+    int len = bmp_string_width(fnt, display);
     
     if (len > 720 - 2*x)
     {
@@ -2690,7 +2748,7 @@ static void print_help_line(int color, int x, int y, char* msg)
     
     bmp_printf(
         fnt, x, y,
-        "%s", msg
+        "%s", display
     );
 }
 
@@ -2802,23 +2860,49 @@ skip_name:
     if (use_small_font)
         fnt = (fnt & ~FONT_MASK) | FONT_MED_LARGE;
     
+    char translated_value[128];
+    const char *display_value = bmp_translate_menu_value(fnt, entry->name,
+        info->value, translated_value, sizeof(translated_value));
+    int literal_value = entry->selected && editing_with_caret(entry);
+    if (literal_value) display_value = info->value;
+
     // far right end
     int x_end = in_submenu ? x + g_submenu_width - SUBMENU_OFFSET : 717;
     
+    int name_font = fnt;
+#ifdef CONFIG_MENU_RU
+    /* Long composed values can use a smaller shipped RBF without changing
+     * the original value, caret data or the font used for the entry name. */
+    if (menu_language_ru && !editing_with_caret(entry) &&
+        bmp_string_width(fnt, display_value) > x_end - x)
+    {
+        const char *gate = "ON";
+        int candidates[] = {FONT_MED_LARGE, FONT_MED};
+        for (unsigned i = 0; i < COUNT(candidates); i++)
+        {
+            int candidate = (fnt & ~FONT_MASK) | candidates[i];
+            if (FONT_ID(candidate) < FONT_ID(fnt) &&
+                bmp_translate_string(candidate, gate) != gate)
+                fnt = candidate;
+            if (bmp_string_width(fnt, display_value) <= x_end - x) break;
+        }
+    }
+#endif
     int char_width = fontspec_font(fnt)->width;
-    w = MAX(w, bmp_string_width(fnt, info->name) + char_width);
+    w = MAX(w, bmp_string_width(name_font, info->name) + char_width);
 
     // both submenu marker and value? make sure they don't overlap
-    if (entry->icon_type == IT_SUBMENU && info->value[0])
+    if (entry->icon_type == IT_SUBMENU && display_value[0])
         w += 2 * char_width;
     
     // value string too big? move it to the left
-    int val_width = bmp_string_width(fnt, info->value);
+    int val_width = literal_value ? bmp_literal_width(fnt, display_value)
+                                  : bmp_string_width(fnt, display_value);
     int end = w + val_width;
     int wmax = x_end - x;
 
     // right-justified info field?
-    int rlen = bmp_string_width(fnt, info->rinfo);
+    int rlen = bmp_string_width(MENU_FONT_GRAY, info->rinfo);
     int rinfo_x = x_end - rlen - 35;
     if (rlen) wmax -= rlen + char_width + 35;
     
@@ -2834,8 +2918,11 @@ skip_name:
     int xval = x + w;
 
     // value overlaps name? show value only (overwrite the name)
-    if (xval < x + bmp_string_width(fnt, info->name))
+    if (xval < x + bmp_string_width(name_font, info->name))
     {
+        /* A smaller value font cannot erase the full-height old name. */
+        bmp_fill(FONT_BG(name_font), x, y + y_font_offset,
+                 x_end - x, fontspec_font(name_font)->height);
         xval = x;
     }
 
@@ -2848,20 +2935,19 @@ skip_name:
     }
 
     // print value field
-    bmp_printf(
-        fnt,
-        xval, y + y_font_offset,
-        "%s",
-        info->value
-    );
+    int value_y_offset = (h - (int)fontspec_font(fnt)->height) / 2;
+    if (literal_value)
+        bmp_draw_literal(fnt, xval, y + value_y_offset, display_value);
+    else
+        bmp_printf(fnt, xval, y + value_y_offset, "%s", display_value);
     
     if(entry->selected &&
        editing_with_caret(entry) &&
        caret_position < (int)strlen(info->value) &&
        strlen(info->value) > 0)
     {
-        int w1 = bmp_string_width(fnt, (info->value + strlen(info->value) - caret_position));
-        int w2 = bmp_string_width(fnt, (info->value + strlen(info->value) - caret_position - 1));
+        int w1 = bmp_literal_width(fnt, (info->value + strlen(info->value) - caret_position));
+        int w2 = bmp_literal_width(fnt, (info->value + strlen(info->value) - caret_position - 1));
         bmp_fill(COLOR_WHITE, xval + val_width - w2, y + fontspec_font(fnt)->height - 4, w2 - w1, 2);
     }
 
@@ -2960,31 +3046,15 @@ skip_name:
             print_help_line(help_color, 10, MENU_HELP_Y_POS, help1);
         }
 
-        char* help2 = 0;
-        if (help1 != info->help)
-        {
-            /* help1 already used for something else?
-             * put overriden help (via MENU_SET_HELP) here */
-            help2 = info->help;
-        }
-        else if (entry->help2)
-        {
-            /* pick help line according to selected choice */
-            help2 = menu_help_get_line(entry->help2, SELECTED_INDEX(entry), help2_buf);
-        }
-        
+        char* help2 = menu_secondary_help(help1, info->help, entry->help2,
+                                          SELECTED_INDEX(entry), help2_buf);
+
         if (!help2 || !help2[0]) // default help just list the choices
         {
             int num = NUM_CHOICES(entry);
             if (num > 2 && num < 10)
             {
-                help2_buf[0] = 0;
-                for (int i = entry->min; i <= entry->max; i++)
-                {
-                    int len = bmp_string_width(FONT_MED, help2_buf);
-                    if (len > 700) break;
-                    STR_APPEND(help2_buf, "%s%s", pickbox_string(entry, i), i < entry->max ? " / " : ".");
-                }
+                menu_build_choice_help(entry, help2_buf, sizeof(help2_buf));
                 help_color = 50;
                 help2 = help2_buf;
             }
@@ -5420,7 +5490,7 @@ handle_ml_menu_keys(struct event * event)
         if (menu_help_active)
         {
             /* fixme: go up one level until the help page is found */
-            menu_help_go_to_selected_entry(get_selected_toplevel_menu());
+            menu_help_go_to_selected_entry(get_current_menu_or_submenu());
         }
         menu_needs_full_redraw = 1;
         //~ menu_damage = 1;
@@ -5513,6 +5583,10 @@ menu_init( void )
     menu_find_by_name( "Modules",   ICON_ML_MODULES );
     menu_find_by_name( "Debug",     ICON_ML_DEBUG   );
     menu_find_by_name( "Help",      ICON_ML_INFO    );
+
+    #ifdef CONFIG_MENU_RU
+    menu_add("Prefs", menu_language_entries, COUNT(menu_language_entries));
+    #endif
 
     struct menu *m = menu_find_by_name( "Modules", 0 );
     ASSERT(m);
@@ -6084,7 +6158,9 @@ menu_help_go_to_selected_entry(
 
     struct menu_entry * entry = get_selected_menu_entry(menu);
     if (!entry) return;
-    menu_help_go_to_label((char*) entry->name, 0);
+    /* Prefer the selected submenu item; old guides may only document a parent. */
+    for (int depth = 0; entry && depth < 8; depth++, entry = entry->parent)
+        if (menu_help_try_label(entry->name)) return;
 }
 
 static void menu_show_version(void)

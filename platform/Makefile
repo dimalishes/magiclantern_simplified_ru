@@ -58,6 +58,8 @@ CFLAGS += \
     -DCURRENT_CAMERA_SIGNATURE=SIG_$(MODEL)_$(FW_VERSION) \
     -DVERSION=\"$(VERSION)\"
 
+ML_BUILD_USER ?= $(shell whoami)@$(shell hostname)
+
 BUILD_DATE = $(call eval_once,BUILD_DATE,$(shell LC_TIME=EN date +'%Y-%m-%d'))
 VERSION = $(BUILD_DATE).$(MODEL).$(FW_VERSION)
 
@@ -605,7 +607,7 @@ $(BUILD_DIR)/version.bin: FORCE | $(BUILD_DIR)
 	@printf 'Commit: ' >> $@.tmp
 	$(BUILD_TOOLS_DIR)/git_summary.py >> $@.tmp
 	@echo '' >> $@.tmp
-	@echo 'Built on : '`date -u "+%Y-%m-%d %H:%M:%S"`' by '`whoami`@`hostname` >> $@.tmp
+	@echo 'Built on : '`date -u "+%Y-%m-%d %H:%M:%S"`' by $(ML_BUILD_USER)' >> $@.tmp
 	@echo '' >> $@.tmp
 	$(MV) $@.tmp $@
 
@@ -615,7 +617,7 @@ $(BUILD_DIR)/version.c: FORCE | $(BUILD_DIR)
 	$(BUILD_TOOLS_DIR)/git_summary.py >> $(BUILD_DIR)/version.tmp
 	@echo '";' >> $(BUILD_DIR)/version.tmp
 	@echo 'const char build_date[] ="'`$(DATE) "+%Y-%m-%d %H:%M:%S %Z"`'";' >> $(BUILD_DIR)/version.tmp
-	@echo 'const char build_user[] = "'`whoami`@`hostname`'";'  >> $(BUILD_DIR)/version.tmp
+	@echo 'const char build_user[] = "$(ML_BUILD_USER)";'  >> $(BUILD_DIR)/version.tmp
 	mv $(BUILD_DIR)/version.tmp $@
 
 $(BUILD_DIR)/xor_chk: $(BUILD_TOOLS_DIR)/xor_chk.c | $(BUILD_DIR)

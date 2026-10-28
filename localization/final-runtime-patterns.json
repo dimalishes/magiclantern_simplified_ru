@@ -1,0 +1,942 @@
+[
+  {
+    "id": 3107,
+    "en": "%d tracked small blocks (%s), %d total (%s), \noverhead %s (dynamic) + %s (fixed) + %s (history), peak %s",
+    "ru": "Малых блоков: %d (%s), всего %d (%s), \nрасходы: %s (динамические) + %s (постоянные) + %s (история), пик %s"
+  },
+  {
+    "id": 3106,
+    "en": "%d tracked small blocks (%s), %d total (%s), \noverhead %s (dynamic) + %s (fixed) + %s (history)",
+    "ru": "Малых блоков: %d (%s), всего %d (%s), \nрасходы: %s (динамические) + %s (постоянные) + %s (история)"
+  },
+  {
+    "id": 3103,
+    "en": "%d tracked small blocks (%s), %d total (%s), \noverhead %s (dynamic) + %s (history), peak %s",
+    "ru": "Малых блоков: %d (%s), всего %d (%s), \nрасходы: %s (динамические) + %s (история), пик %s"
+  },
+  {
+    "id": 3105,
+    "en": "%d tracked small blocks (%s), %d total (%s), \noverhead %s (dynamic) + %s (fixed), peak %s",
+    "ru": "Малых блоков: %d (%s), всего %d (%s), \nрасходы: %s (динамические) + %s (постоянные), пик %s"
+  },
+  {
+    "id": 3102,
+    "en": "%d tracked small blocks (%s), %d total (%s), \noverhead %s (dynamic) + %s (history)",
+    "ru": "Малых блоков: %d (%s), всего %d (%s), \nрасходы: %s (динамические) + %s (история)"
+  },
+  {
+    "id": 3104,
+    "en": "%d tracked small blocks (%s), %d total (%s), \noverhead %s (dynamic) + %s (fixed)",
+    "ru": "Малых блоков: %d (%s), всего %d (%s), \nрасходы: %s (динамические) + %s (постоянные)"
+  },
+  {
+    "id": 389,
+    "en": "Crash detected - log file saved.\nPls send CRASH%02d.LOG to ML devs.\n\n%s",
+    "ru": "Обнаружен сбой. Журнал сохранён.\nПередайте CRASH%02d.LOG разработчикам ML.\n\n%s"
+  },
+  {
+    "id": 3101,
+    "en": "%d tracked small blocks (%s), %d total (%s), \noverhead %s (dynamic), peak %s",
+    "ru": "Малых блоков: %d (%s), всего %d (%s), \nрасходы: %s (динамические), пик %s"
+  },
+  {
+    "id": 3100,
+    "en": "%d tracked small blocks (%s), %d total (%s), \noverhead %s (dynamic)",
+    "ru": "Малых блоков: %d (%s), всего %d (%s), \nрасходы: %s (динамические)"
+  },
+  {
+    "id": 393,
+    "en": "Lets break Guiness World Records (rated lifespan %d).",
+    "ru": "Побьём рекорды Гиннесса! Ресурс затвора: %d."
+  },
+  {
+    "id": 1021,
+    "en": "Magic Lantern version: %s\nGit commit: %s\nBuilt on %s by %s.",
+    "ru": "Версия Magic Lantern: %s\nКоммит Git: %s\nСобрано %s, автор %s."
+  },
+  {
+    "id": 1451,
+    "en": "%s unnecessary and may cause excessive shutter wear.",
+    "ru": "%s не требуется и может ускорить износ затвора."
+  },
+  {
+    "id": 395,
+    "en": "I hope I get to rated lifespan (rated lifespan %d).",
+    "ru": "Надеюсь дожить до заявленного ресурса затвора: %d."
+  },
+  {
+    "id": 941,
+    "en": "Magic Lantern Firmware version %s (%s)\nBuilt on%s by %s\n%s",
+    "ru": "Версия Magic Lantern: %s (%s)\nСобрано%s, автор %s\n%s"
+  },
+  {
+    "id": 1216,
+    "en": "Patch %x overwritten (expected %x, current value %x).",
+    "ru": "Патч %x перезаписан: ожидалось %x, сейчас %x."
+  },
+  {
+    "id": 917,
+    "en": "Free & used memory from %s. %d blocks allocated.",
+    "ru": "Память %s: свободно и занято. Выделено блоков: %d."
+  },
+  {
+    "id": 1388,
+    "en": "Check auto power off setting (currently %ds).",
+    "ru": "Проверьте автоотключение питания: сейчас %d с."
+  },
+  {
+    "id": 1800,
+    "en": "Will use RAW RGB zebras %safter taking a pic.",
+    "ru": "RAW RGB-зебра %sпосле снимка."
+  },
+  {
+    "id": 394,
+    "en": "Lifespans are for wimps (rated lifespan %d).",
+    "ru": "Ресурс затвора для слабаков! Заявлено: %d."
+  },
+  {
+    "id": 922,
+    "en": "Would be nice to have at least %s free here.",
+    "ru": "Здесь желательно иметь хотя бы %s свободной памяти."
+  },
+  {
+    "id": 1390,
+    "en": "Not enough space for %d shots (only for %d).",
+    "ru": "Не хватает места для %d снимков. Поместится только %d."
+  },
+  {
+    "id": 1462,
+    "en": " Intervalometer: %s  \n Pictures taken: %d  ",
+    "ru": " Интервалометр: %s\n Сделано снимков: %d"
+  },
+  {
+    "id": 1574,
+    "en": "Average exposure: %3d    New exposure: %3d   ",
+    "ru": "Средняя экспозиция: %3d    Новая экспозиция: %3d   "
+  },
+  {
+    "id": 718,
+    "en": "ML ASSERT:\n%s\nat %s:%d (%s), task %s\nlv:%d mode:%d\n\n",
+    "ru": "ПРОВЕРКА ML:\n%s\nat %s:%d (%s), task %s\nlv:%d mode:%d\n\n"
+  },
+  {
+    "id": 919,
+    "en": "Memory used from %s. %d blocks allocated.",
+    "ru": "Использование памяти %s. Выделено блоков: %d."
+  },
+  {
+    "id": 1215,
+    "en": "Patch %x overwritten (expected %x, got %x).",
+    "ru": "Патч %x перезаписан: ожидалось %x, получено %x."
+  },
+  {
+    "id": 966,
+    "en": "This feature requires %s AF disabled.",
+    "ru": "Для этой функции нужен выключенный AF: %s."
+  },
+  {
+    "id": 1226,
+    "en": "Patch error at %x (jump out of range)",
+    "ru": "Ошибка патча по адресу %x: переход вне диапазона"
+  },
+  {
+    "id": 963,
+    "en": "This feature requires %s AF enabled.",
+    "ru": "Для этой функции нужен включённый AF: %s."
+  },
+  {
+    "id": 1112,
+    "en": "No info structure found (addr 0x%X)\n",
+    "ru": "Структура сведений не найдена: адрес 0x%X\n"
+  },
+  {
+    "id": 1385,
+    "en": "Timelapse: %dh%02dm, %d shots, %d fps => %02dm%02ds.",
+    "ru": "Таймлапс: %d ч %02d мин, %d кадров, %d FPS => %02d мин %02d с."
+  },
+  {
+    "id": 1466,
+    "en": "Handhedld MLU does not work with %s.",
+    "ru": "Предподъём с рук не работает вместе с %s."
+  },
+  {
+    "id": 1129,
+    "en": "Passing too many parameters to '%s'",
+    "ru": "Слишком много параметров передано в '%s'"
+  },
+  {
+    "id": 1564,
+    "en": " Intervalometer: waiting for %s...\n",
+    "ru": " Интервалометр: ожидание %s...\n"
+  },
+  {
+    "id": 1109,
+    "en": "Wrong version (v%d.%d, expected v%d.%d)\n",
+    "ru": "Неверная версия: v%d.%d, нужна v%d.%d\n"
+  },
+  {
+    "id": 633,
+    "en": "Rolling shutter: %s%d.%d ms (%d%%) at %dx%d.",
+    "ru": "Rolling shutter: %s%d.%d мс (%d%%), %dx%d."
+  },
+  {
+    "id": 1556,
+    "en": "movie_end: not movie mode (%d,%d) ",
+    "ru": "movie_end: не видеорежим (%d,%d) "
+  },
+  {
+    "id": 412,
+    "en": "Format       (ML size: %s%d.%d MB%s)",
+    "ru": "Форматирование (размер ML: %s%d.%d МБ%s)"
+  },
+  {
+    "id": 717,
+    "en": "ASSERT: %s\nat %s:%d, %s:%x\nlv:%d mode:%d\n\n",
+    "ru": "ПРОВЕРКА: %s\nat %s:%d, %s:%x\nlv:%d mode:%d\n\n"
+  },
+  {
+    "id": 1576,
+    "en": "Interval time too short (%ds)",
+    "ru": "Интервал слишком короткий: %d с"
+  },
+  {
+    "id": 927,
+    "en": "%d tracked small blocks (%s), ",
+    "ru": "Малых блоков под контролем: %d (%s), "
+  },
+  {
+    "id": 1052,
+    "en": "Could not load help page %s.",
+    "ru": "Не удалось загрузить страницу справки %s."
+  },
+  {
+    "id": 1571,
+    "en": "[HalfShutter] Bulb timer: %s",
+    "ru": "[Полунажатие] Таймер Bulb: %s"
+  },
+  {
+    "id": 1225,
+    "en": "Patch error at %x (no slot)",
+    "ru": "Ошибка патча по адресу %x: нет свободного слота"
+  },
+  {
+    "id": 1785,
+    "en": "TOO MANY CROPMARKS (max=%d)",
+    "ru": "СЛИШКОМ МНОГО РАМОК КАДРИРОВАНИЯ: максимум %d"
+  },
+  {
+    "id": 892,
+    "en": "No allocator for %s at %s:%d, %s.",
+    "ru": "Нет распределителя для %s: %s:%d, %s."
+  },
+  {
+    "id": 176,
+    "en": "Bit Rate (VBR) : QScale %d",
+    "ru": "Битрейт (VBR): QScale %d"
+  },
+  {
+    "id": 369,
+    "en": "Will dump VRAMs in %d s...",
+    "ru": "Сохранение буферов изображения через %d с..."
+  },
+  {
+    "id": 1567,
+    "en": " Taking picture in %d.%ds   ",
+    "ru": " Снимок через %d.%d с   "
+  },
+  {
+    "id": 1133,
+    "en": "%s. Press %s for more info.",
+    "ru": "%s. Подробнее: нажмите %s."
+  },
+  {
+    "id": 1681,
+    "en": "Pic quality is not fine%s",
+    "ru": "Качество снимков отличается от Fine%s"
+  },
+  {
+    "id": 4001,
+    "en": "Magic Lantern version: %s",
+    "ru": "Версия Magic Lantern: %s"
+  },
+  {
+    "id": 596,
+    "en": "Pre-focusing %d steps...",
+    "ru": "Предварительная фокусировка: %d шагов..."
+  },
+  {
+    "id": 933,
+    "en": "Memcheck overhead: %d.%d%%.",
+    "ru": "Расходы на контроль памяти: %d.%d%%."
+  },
+  {
+    "id": 1577,
+    "en": "Audio release ON (%2d / %2d)",
+    "ru": "Спуск по звуку ВКЛ (%2d / %2d)"
+  },
+  {
+    "id": 1680,
+    "en": "Pic quality is not RAW%s",
+    "ru": "Качество снимков отличается от RAW%s"
+  },
+  {
+    "id": 426,
+    "en": "Could not restore %s :(",
+    "ru": "Не удалось восстановить %s :("
+  },
+  {
+    "id": 1096,
+    "en": "Load failed: %s, ret 0x%02X",
+    "ru": "Сбой загрузки: %s, код 0x%02X"
+  },
+  {
+    "id": 396,
+    "en": "You may get around %d.",
+    "ru": "Ожидаемый ресурс затвора: около %d."
+  },
+  {
+    "id": 929,
+    "en": "\noverhead %s (dynamic)",
+    "ru": "\nнакладные расходы: %s (динамические)"
+  },
+  {
+    "id": 1227,
+    "en": "Unpatch error at %x (%s)",
+    "ru": "Ошибка отмены патча по адресу %x (%s)"
+  },
+  {
+    "id": 1538,
+    "en": "Saved %s\n%s%04d.JPG ... %s%04d.JPG",
+    "ru": "Сохранено %s\n%s%04d.JPG ... %s%04d.JPG"
+  },
+  {
+    "id": 1683,
+    "en": "WB isn't set to auto%s",
+    "ru": "Баланс белого не автоматический%s"
+  },
+  {
+    "id": 2003,
+    "en": "Diffraction\nblur: %dm",
+    "ru": "Дифр. размытие\n%d мкм"
+  },
+  {
+    "id": 175,
+    "en": "Bit Rate (CBR) : %d.%dx",
+    "ru": "Битрейт (CBR): %d.%dx"
+  },
+  {
+    "id": 600,
+    "en": "Reversing %d steps...",
+    "ru": "Обратный ход: %d шагов..."
+  },
+  {
+    "id": 1110,
+    "en": "Invalid Magic (0x%X)\n",
+    "ru": "Неверная сигнатура: 0x%X\n"
+  },
+  {
+    "id": 1685,
+    "en": "Focus is not manual%s",
+    "ru": "Фокус не ручной%s"
+  },
+  {
+    "id": 885,
+    "en": "%s[%d/%d] %s(%s) at %s:%d, task %s.",
+    "ru": "%s[%d/%d] %s(%s), %s:%d, задача %s."
+  },
+  {
+    "id": 598,
+    "en": "Focusing %d steps...",
+    "ru": "Фокусировка: %d шагов..."
+  },
+  {
+    "id": 1207,
+    "en": "Patch error at %x (%s)",
+    "ru": "Ошибка патча по адресу %x (%s)"
+  },
+  {
+    "id": 1619,
+    "en": "Display Gain : %d EV",
+    "ru": "Усиление изображения: %d EV"
+  },
+  {
+    "id": 1699,
+    "en": "LCD Saturation  : %s",
+    "ru": "Насыщенность LCD: %s"
+  },
+  {
+    "id": 3015,
+    "en": "FW default(reboot)",
+    "ru": "Штатный(перезапуск)"
+  },
+  {
+    "id": 112,
+    "en": "Volume: %d + (%d,%d) dB",
+    "ru": "Громкость: %d + (%d,%d) дБ"
+  },
+  {
+    "id": 597,
+    "en": "Focus stack: %d of %d",
+    "ru": "Focus Stacking: %d из %d"
+  },
+  {
+    "id": 1006,
+    "en": "Elapsed time: %d ms",
+    "ru": "Прошло: %d мс"
+  },
+  {
+    "id": 1553,
+    "en": "Over :%3d.%02d%%\nUnder:%3d.%02d%%",
+    "ru": "Пересвет:%3d.%02d%%\nНедосвет:%3d.%02d%%"
+  },
+  {
+    "id": 1572,
+    "en": "[2s] Bulb timer: %s",
+    "ru": "[2 с] Таймер Bulb: %s"
+  },
+  {
+    "id": 1573,
+    "en": "[1s] Bulb timer: %s",
+    "ru": "[1 с] Таймер Bulb: %s"
+  },
+  {
+    "id": 1575,
+    "en": "Motion level: %d   ",
+    "ru": "Уровень движения: %d   "
+  },
+  {
+    "id": 1684,
+    "en": "Focus is not auto%s",
+    "ru": "Фокус не автоматический%s"
+  },
+  {
+    "id": 890,
+    "en": "%s(%s) failed at %s:%d, %s.",
+    "ru": "Сбой %s(%s): %s:%d, %s."
+  },
+  {
+    "id": 700,
+    "en": "Clip warning  : %s",
+    "ru": "Пересвет: %s"
+  },
+  {
+    "id": 1167,
+    "en": "Shutter Lock  : %s",
+    "ru": "Блокировка выдержки: %s"
+  },
+  {
+    "id": 1447,
+    "en": "Picture Style : %s",
+    "ru": "Стиль изображения: %s"
+  },
+  {
+    "id": 1844,
+    "en": "Display preset: %d",
+    "ru": "Пресет экрана: %d"
+  },
+  {
+    "id": 1850,
+    "en": "%d seconds => %d fps",
+    "ru": "%d секунд => %d FPS"
+  },
+  {
+    "id": 113,
+    "en": "Out Volume: %d dB",
+    "ru": "Громкость выхода: %d дБ"
+  },
+  {
+    "id": 656,
+    "en": "FPS override: %d.%03d",
+    "ru": "Переопределение FPS: %d.%03d"
+  },
+  {
+    "id": 1620,
+    "en": "LCD Backlight: %d",
+    "ru": "Подсветка LCD: %d"
+  },
+  {
+    "id": 1787,
+    "en": "LOAD ERROR %d:%s   ",
+    "ru": "ОШИБКА ЗАГРУЗКИ %d:%s   "
+  },
+  {
+    "id": 448,
+    "en": "ResLock fail %x %x",
+    "ru": "Ошибка блокировки ресурса %x %x"
+  },
+  {
+    "id": 586,
+    "en": "Lens: %s, %dmm f/%d.%d",
+    "ru": "Объектив: %s, %d мм f/%d.%d"
+  },
+  {
+    "id": 595,
+    "en": "Focus stack: %dx%d",
+    "ru": "Focus Stacking: %dx%d"
+  },
+  {
+    "id": 1142,
+    "en": "Built on %s by %s.",
+    "ru": "Собрано %s, автор %s."
+  },
+  {
+    "id": 1254,
+    "en": "(unknown len %d)",
+    "ru": "(неизвестная длина %d)"
+  },
+  {
+    "id": 1677,
+    "en": "Mode is not Av%s",
+    "ru": "Режим отличается от Av%s"
+  },
+  {
+    "id": 1678,
+    "en": "Mode is not Tv%s",
+    "ru": "Режим отличается от Tv%s"
+  },
+  {
+    "id": 1682,
+    "en": "ALO is enabled%s",
+    "ru": "ALO включён%s"
+  },
+  {
+    "id": 425,
+    "en": "Restoring %s...",
+    "ru": "Восстановление %s..."
+  },
+  {
+    "id": 722,
+    "en": "Built on %s by %s",
+    "ru": "Собрано %s, автор %s"
+  },
+  {
+    "id": 920,
+    "en": "Max region: %s.",
+    "ru": "Максимальный блок: %s."
+  },
+  {
+    "id": 931,
+    "en": " + %s (history)",
+    "ru": " + %s (история)"
+  },
+  {
+    "id": 1143,
+    "en": "Last update: %s",
+    "ru": "Последнее обновление: %s"
+  },
+  {
+    "id": 1626,
+    "en": "Scrollwheel: %s",
+    "ru": "Диск: %s"
+  },
+  {
+    "id": 1676,
+    "en": "Mode is not M%s",
+    "ru": "Режим отличается от M%s"
+  },
+  {
+    "id": 1679,
+    "en": "Mode is not P%s",
+    "ru": "Режим отличается от P%s"
+  },
+  {
+    "id": 397,
+    "en": "%d C, %d F, %d raw",
+    "ru": "%d C, %d F, сырое значение %d"
+  },
+  {
+    "id": 588,
+    "en": "Focus dist: %s",
+    "ru": "Дист. фокуса: %s"
+  },
+  {
+    "id": 590,
+    "en": "Hyperfocal: %s",
+    "ru": "Гиперфокал: %s"
+  },
+  {
+    "id": 591,
+    "en": "DOF Near:   %s",
+    "ru": "ГРИП от: %s"
+  },
+  {
+    "id": 592,
+    "en": "DOF Far:    %s",
+    "ru": "ГРИП до: %s"
+  },
+  {
+    "id": 1829,
+    "en": "ON, dx=%d, dy=%d",
+    "ru": "ВКЛ, dx=%d, dy=%d"
+  },
+  {
+    "id": 4002,
+    "en": "Git commit: %s",
+    "ru": "Коммит Git: %s"
+  },
+  {
+    "id": 3005,
+    "en": "Trap Focus: %s",
+    "ru": "Trap Focus: %s"
+  },
+  {
+    "id": 81,
+    "en": "Microphone %s",
+    "ru": "Микрофон: %s"
+  },
+  {
+    "id": 93,
+    "en": "Headphones %s",
+    "ru": "Наушники: %s"
+  },
+  {
+    "id": 413,
+    "en": "Reading %s...",
+    "ru": "Чтение %s..."
+  },
+  {
+    "id": 928,
+    "en": "%d total (%s), ",
+    "ru": "всего %d (%s), "
+  },
+  {
+    "id": 930,
+    "en": " + %s (fixed)",
+    "ru": " + %s (постоянные)"
+  },
+  {
+    "id": 1336,
+    "en": "%s not loaded",
+    "ru": "%s не загружен"
+  },
+  {
+    "id": 1422,
+    "en": "%s multiplier",
+    "ru": "Множитель %s"
+  },
+  {
+    "id": 1461,
+    "en": "Remaining: %d",
+    "ru": "Осталось: %d"
+  },
+  {
+    "id": 2001,
+    "en": "%s%d.%d s / line",
+    "ru": "%s%d.%d мкс/строку"
+  },
+  {
+    "id": 169,
+    "en": "FW default%s",
+    "ru": "Штатный%s"
+  },
+  {
+    "id": 500,
+    "en": "Saving %8x...",
+    "ru": "Сохранение %8x..."
+  },
+  {
+    "id": 637,
+    "en": "FPS timer %s",
+    "ru": "Таймер FPS %s"
+  },
+  {
+    "id": 659,
+    "en": "Average = %03d",
+    "ru": "Среднее = %03d"
+  },
+  {
+    "id": 1335,
+    "en": "%s not found",
+    "ru": "%s не найден"
+  },
+  {
+    "id": 1394,
+    "en": "ON, level=%d",
+    "ru": "ВКЛ, порог=%d"
+  },
+  {
+    "id": 1789,
+    "en": "Bitmap (%d/%d)",
+    "ru": "Рамка (%d/%d)"
+  },
+  {
+    "id": 133,
+    "en": "%d%%, %dh%02dm, %d%%/h",
+    "ru": "%d%%, %d ч %02d мин, %d%%/ч"
+  },
+  {
+    "id": 629,
+    "en": "Roll.sh.%d%%",
+    "ru": "Rolling sh.%d%%"
+  },
+  {
+    "id": 631,
+    "en": "%d.%03d (from %d)",
+    "ru": "%d.%03d (из %d)"
+  },
+  {
+    "id": 1413,
+    "en": "%d images  ",
+    "ru": "%d снимков  "
+  },
+  {
+    "id": 3013,
+    "en": "after %dmin",
+    "ru": "через %d мин"
+  },
+  {
+    "id": 78,
+    "en": "AGC:%s%d.%03d dB",
+    "ru": "AGC:%s%d.%03d дБ"
+  },
+  {
+    "id": 632,
+    "en": "%d (from %d)",
+    "ru": "%d (из %d)"
+  },
+  {
+    "id": 1395,
+    "en": "%s, level=%d",
+    "ru": "%s, порог=%d"
+  },
+  {
+    "id": 3007,
+    "en": "Magenta %d",
+    "ru": "Пурпурный %d"
+  },
+  {
+    "id": 94,
+    "en": "Input: %s",
+    "ru": "Вход: %s"
+  },
+  {
+    "id": 604,
+    "en": "(%d pics)",
+    "ru": "(%d снимков)"
+  },
+  {
+    "id": 916,
+    "en": ", %s used",
+    "ru": ", занято %s"
+  },
+  {
+    "id": 932,
+    "en": ", peak %s",
+    "ru": ", пик %s"
+  },
+  {
+    "id": 1449,
+    "en": "%d frames",
+    "ru": "%d кадров"
+  },
+  {
+    "id": 3002,
+    "en": "%s, %s used",
+    "ru": "%s, занято %s"
+  },
+  {
+    "id": 3012,
+    "en": "after %ds",
+    "ru": "через %d с"
+  },
+  {
+    "id": 3016,
+    "en": "QScale %s%d",
+    "ru": "QScale %s%d"
+  },
+  {
+    "id": 3020,
+    "en": "[FAIL] %s",
+    "ru": "[ОШИБКА] %s"
+  },
+  {
+    "id": 3021,
+    "en": "%s, peak %s",
+    "ru": "%s, пик %s"
+  },
+  {
+    "id": 3022,
+    "en": "%s:%d task %s",
+    "ru": "%s:%d задача %s"
+  },
+  {
+    "id": 660,
+    "en": "MIN = %03d",
+    "ru": "МИН = %03d"
+  },
+  {
+    "id": 661,
+    "en": "%03d = MAX",
+    "ru": "%03d = МАКС"
+  },
+  {
+    "id": 663,
+    "en": "delta %03d",
+    "ru": "разница %03d"
+  },
+  {
+    "id": 664,
+    "en": "%03d delta",
+    "ru": "%03d разница"
+  },
+  {
+    "id": 1243,
+    "en": "after %d%s",
+    "ru": "через %d%s"
+  },
+  {
+    "id": 1389,
+    "en": "%d shots",
+    "ru": "%d снимков"
+  },
+  {
+    "id": 1550,
+    "en": "Saved %s",
+    "ru": "Сохранено %s"
+  },
+  {
+    "id": 630,
+    "en": ", Rs.%d%%",
+    "ru": ", RS.%d%%"
+  },
+  {
+    "id": 3006,
+    "en": "Green %d",
+    "ru": "Зелёный %d"
+  },
+  {
+    "id": 3008,
+    "en": "Amber %d",
+    "ru": "Янтарный %d"
+  },
+  {
+    "id": 642,
+    "en": "%d.%02d MHz",
+    "ru": "%d.%02d МГц"
+  },
+  {
+    "id": 808,
+    "en": "DISP %d",
+    "ru": "ПРЕСЕТ %d"
+  },
+  {
+    "id": 918,
+    "en": "%s used",
+    "ru": "занято %s"
+  },
+  {
+    "id": 3004,
+    "en": "%s: %d...",
+    "ru": "%s: %d..."
+  },
+  {
+    "id": 3009,
+    "en": "Blue %d",
+    "ru": "Синий %d"
+  },
+  {
+    "id": 1217,
+    "en": "%d ERR",
+    "ru": "Ошибок: %d"
+  },
+  {
+    "id": 522,
+    "en": "MIN:%d",
+    "ru": "МИН:%d"
+  },
+  {
+    "id": 523,
+    "en": "MAX:%d",
+    "ru": "МАКС:%d"
+  },
+  {
+    "id": 912,
+    "en": "%s of ",
+    "ru": "%s из "
+  },
+  {
+    "id": 1393,
+    "en": "ON, %s",
+    "ru": "ВКЛ, %s"
+  },
+  {
+    "id": 3001,
+    "en": "%s of %s",
+    "ru": "%s из %s"
+  },
+  {
+    "id": 3011,
+    "en": "%dmin",
+    "ru": "%d мин"
+  },
+  {
+    "id": 3023,
+    "en": "%dh%dm%ds",
+    "ru": "%d ч %d мин %d с"
+  },
+  {
+    "id": 3027,
+    "en": "%d ms",
+    "ru": "%d мс"
+  },
+  {
+    "id": 3028,
+    "en": "%d s",
+    "ru": "%d мкс"
+  },
+  {
+    "id": 559,
+    "en": "%d.%dm",
+    "ru": "%d.%d м"
+  },
+  {
+    "id": 560,
+    "en": "%dcm",
+    "ru": "%d см"
+  },
+  {
+    "id": 608,
+    "en": "%dms",
+    "ru": "%d мс"
+  },
+  {
+    "id": 3024,
+    "en": "%dm%ds",
+    "ru": "%d мин %d с"
+  },
+  {
+    "id": 3025,
+    "en": "%dh%dm",
+    "ru": "%d ч %d мин"
+  },
+  {
+    "id": 3026,
+    "en": "%dh%ds",
+    "ru": "%d ч %d с"
+  },
+  {
+    "id": 558,
+    "en": "%dm",
+    "ru": "%d м"
+  },
+  {
+    "id": 1383,
+    "en": "%dh",
+    "ru": "%d ч"
+  },
+  {
+    "id": 3003,
+    "en": "%s%d %s",
+    "ru": "%s%d %s"
+  },
+  {
+    "id": 3010,
+    "en": "%ds",
+    "ru": "%d с"
+  },
+  {
+    "id": 3030,
+    "en": "%dm",
+    "ru": "%d мин"
+  }
+]

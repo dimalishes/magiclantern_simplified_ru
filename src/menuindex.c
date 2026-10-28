@@ -139,9 +139,12 @@ static struct menu_entry help_menus[] = {
     },
     {
         .name = "Key Shortcuts",
+        .priv = "Key shortcuts",
         .select = menu_help_go_to_label,
+        .update = user_guide_display,
+        .icon_type = IT_ACTION,
     },
-#if 0 // disable old, broken help system
+#if 1 // generated bilingual card pages and stable English index keys
     {
         .name = "Complete user guide",
         .select = menu_open_submenu,

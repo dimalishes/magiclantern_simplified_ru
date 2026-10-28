@@ -1,0 +1,1668 @@
+Audio	Звук
+Expo	Экспозиция
+Overlay	Наложение
+Movie	Видео
+Shoot	Съёмка
+Focus	Фокус
+Display	Экран
+Prefs	Настройки
+Debug	Отладка
+Modules	Модули
+Help	Справка
+MyMenu	Моё меню
+Modified	Изменённые
+Recent	Недавние
+ON	ВКЛ
+OFF	ВЫКЛ
+Auto	Авто
+AUTO	АВТО
+Default	По умолчанию
+Normal	Обычный
+Disabled	Отключено
+Enabled	Включено
+Yes	Да
+No	Нет
+None	Нет
+Internal	Встроенный
+External	Внешний
+Advanced...	Подробнее...
+Simple...	Проще...
+Advanced settings	Доп. настройки
+Mode	Режим
+Delay	Задержка
+Start Delay	Задержка старта
+Trigger mode	Режим запуска
+Customize Menus	Кастомизация меню
+Menu Preferences	Параметры меню
+Start in MyMenu	Старт с Моего меню
+SET action	Действие SET
+(empty)	(пусто)
+White Balance	Баланс белого
+Shutter	Выдержка
+Aperture	Диафрагма
+Picture Style	Стиль изображения
+Sharpness	Резкость
+Contrast	Контраст
+Saturation	Насыщенность
+Color Tone	Цветовой тон
+REC-PicStyle	Стиль при записи
+Expo. Lock	Фикс. экспозиции
+Expo. Presets	Пресеты экспозиции
+ISO Selection	Выбор ISO
+Equivalent ISO	Эквивалент ISO
+Canon analog ISO	Аналоговое ISO Canon
+Canon digital ISO	Цифровое ISO Canon
+ML digital ISO	Цифровое ISO ML
+Min Movie AutoISO	Мин. AutoISO видео
+Max Movie AutoISO	Макс. AutoISO видео
+A-ISO smoothness	Плавность AutoISO
+WBShift G/M	Сдвиг ББ З/П
+WBShift B/A	Сдвиг ББ С/Я
+R multiplier	Множитель красного
+G multiplier	Множитель зелёного
+B multiplier	Множитель синего
+Auto adjust Kelvin	Автонастройка ББ, K
+Auto adjust Green-Magenta	Авто ББ зел./пурп.
+Auto adjust Kelvin + G/M	Авто ББ K + З/П
+Analog Gain	Аналог. усиление
+Digital Gain	Цифровое усиление
+Left Digital Gain	Усиление слева
+Right Digital Gain	Усиление справа
+AGC	Автоусиление
+Input source	Источник звука
+Wind Filter	Фильтр ветра
+Mic Power	Питание микрофона
+Audio Meters	Уровни звука
+Audio meters	Уровни звука
+Headphone Mon.	Мониторинг звука
+Headphone Volume	Громкость наушников
+Bit Rate	Битрейт
+CBR factor	Множитель CBR
+Bitrate Info	Показ битрейта
+BuffWarnLevel	Порог буфера
+Sound Record	Запись звука
+Time Indicator	Индикатор времени
+Time indicator	Индикатор времени
+Advanced Bracket	Брекетинг
+Bracket type	Тип брекетинга
+Frames	Кадры
+EV increment	Шаг EV
+Sequence	Порядок кадров
+2-second delay	Задержка 2 с
+ISO shifting	Сдвиг ISO
+Intervalometer	Интервалометр
+Take a pic every	Интервал съёмки
+Start trigger	Способ запуска
+Start after	Начать через
+Stop after	Остановить после
+Bulb Timer	Таймер Bulb
+Exposure duration	Длительность
+Display during exposure	Экран при выдержке
+LCD Remote Shot	Спуск датчиком приближения
+Motion Detect	Детектор движения
+Trigger by	Условие запуска
+Trigger level	Порог запуска
+Detect Size	Область детекции
+Mirror Lockup	Предподъём зеркала
+MLU mode	Режим подъёма
+Handheld Shutter	Спуск с рук
+Handheld Delay	Задержка с рук
+Handheld Debug	Отладка спуска
+Normal MLU Delay	Задержка зеркала
+Voice Tags	Голосовые метки
+Flash Tweaks	Настройки вспышки
+Flash expo comp.	Коррекция вспышки
+Flash / No flash	Со вспышкой / без
+3rd p. flash LV	Сторонняя вспышка LV
+Shoot Preferences	Параметры съёмки
+Pics at once	Кадров за раз
+Use Autofocus	Использовать автофокус
+Post scripts	Скрипт после съёмки
+Intervalometer Script	Скрипт интервалометра
+Snap Simulation	Имитация спуска
+LiveView zoom tweaks	Увеличение LiveView
+Zoom x1	Масштаб x1
+Zoom x5	Масштаб x5
+Zoom x10	Масштаб x10
+Auto exposure on Zoom	Автоэксп. при зуме
+Increase SharpContrast	Усиление SharpContrast
+Zoom on HalfShutter	Зум при полунажатии
+Zoom with Focus Ring	Зум кольцом фокуса
+Double Click	Двойное нажатие
+Zoom with old button	Зум прежней кнопкой
+Trap Focus	Trap Focus
+Number of pics	Число снимков
+Follow Focus	Follow Focus
+Focus using	Фокусировать через
+Focus End Point	Конечная точка
+Rack Focus	Rack Focus
+Focus Stacking	Focus Stacking
+Run focus stack	Запустить стекинг
+Num. pics in front	Кадров перед точкой
+Num. pics behind	Кадров за точкой
+Focus steps / picture	Шагов на кадр
+Flash Delay	Задержка вспышки
+Copy rack focus range	Копировать диапазон
+Bracket focus	Брекетинг фокуса
+Focus Settings	Параметры фокуса
+Step Size	Размер шага
+Step Delay	Задержка шага
+Step Wait	Ожидание шага
+Left/Right dir	Направление влево/вправо
+Up/Down dir	Направление вверх/вниз
+DOF Settings	Глубина резкости
+Circle of Confusion	Кружок нерезкости
+DOF formula	Формула ГРИП
+DOF info in LiveView	ГРИП в LiveView
+Global Draw	Вся индикация
+Global draw	Вся индикация
+Zebras	Зебра
+Zebra	Зебра
+Focus Peak	Focus Peak
+Focus peaking	Focus Peaking
+Focus Peaking	Focus Peaking
+Magic Zoom	Magic Zoom
+Cropmarks	Кадрирующие рамки
+Ghost image	Наложение снимка
+Auto-update	Автообновление
+Spotmeter	Точечный замер
+Spotmeter Unit	Единицы замера
+Spot Position	Позиция замера
+Histogram	Гистограмма
+Waveform	Осциллограмма
+Vectorscope	Вектороскоп
+False color	False Color
+False Color	False Color
+Underexposure	Недосвет
+Overexposure	Пересвет
+Threshold	Порог
+Color	Цвет
+Colorspace	Цветовое пространство
+Opacity	Непрозрачность
+Size	Размер
+Position	Положение
+LV brightness	Яркость LV
+LV contrast	Контраст LV
+LV saturation	Насыщенность LV
+LV display gain	Усиление экрана LV
+LV Display	Экран LV
+Clear overlays	Скрывать индикацию
+Defishing	Коррекция fisheye
+Projection	Проекция
+Anamorphic	Анаморфот
+Stretch Ratio	Коэф. растяжения
+Kill Canon GUI	Скрыть интерфейс Canon
+Screen Layout	Разметка экрана
+Color scheme	Цветовая схема
+Image position	Положение картинки
+UpsideDown mode	Переворот экрана
+Orientation	Ориентация
+Auto Mirroring	Автозеркалирование
+LV crazy colors	Необычные цвета LV
+Display Shake	Дрожание экрана
+Force HDMI-VGA	Режим HDMI-VGA
+Image review settings	Настройка просмотра снимков
+Play mode actions	Действия просмотра
+Action type	Тип действия
+Trigger key(s)	Кнопки запуска
+Image Review	Просмотр снимка
+Quick Zoom	Быстрое увеличение
+Remember last Zoom pos	Помнить позицию зума
+LV button	Кнопка LiveView
+Quick Erase	Быстрое удаление
+Audio Gain	Усиление звука
+ISO/Kelvin	ISO / Температура ББ
+Shutter/Aperture	Выдержка/Диафрагма
+LCD Bright/Saturation	Яркость/Насыщенность
+Use SET button	Использовать SET
+Misc key settings	Прочие кнопки
+Sticky DOF Preview	Фиксация предпросм. ГРИП
+Sticky HalfShutter	Фиксация полунажатия
+Swap MENU <--> ERASE	Поменять MENU <-> ERASE
+Swap INFO <--> PLAY	Поменять INFO <-> PLAY
+Warning for bad settings	Контроль настроек
+Mode warning	Предупр. о режиме
+Quality warning	Предупр. о качестве
+ALO warning	Предупр. об ALO
+WB warning	Предупр. о ББ
+AF/MF warning	Предупр. AF/MF
+Warning message	Текст предупреждения
+Powersave in LiveView	Энергосбережение LV
+Enable while recording	Работать при записи
+Use shortcut key	Быстрая кнопка
+Dim display	Затемнять экран
+Turn off LCD	Выключать экран
+Turn off GlobalDraw	Выключать индикацию
+30-minute timer	Таймер 30 минут
+Flashlight	Фонарик
+Screenshot - 10s	Скриншот экрана: 10 с
+Menu screenshots	Скриншоты меню
+Draw palette	Показать палитру
+Spy properties	Просмотр свойств
+Dialog test	Проверка диалогов
+Dump ROM and RAM	Дамп ROM и RAM
+Dump image buffers	Дамп буферов изображений
+Unmount SD card	Извлечь карту памяти
+Don't click me!	Не нажимать!
+Bootflag settings	Флаги загрузки
+Disable bootflag	Отключить bootflag
+Enable bootflag	Включить bootflag
+Show tasks	Показать задачи
+Task list	Список задач
+Show CPU usage	Загрузка процессора
+Show GUI events	События интерфейса
+Test GUI modes (DANGEROUS!!!)	Тест GUI (ОПАСНО!)
+Image buffers	Буферы изображений
+Shutter Count	Счётчик затвора
+Total Shutter	Всего сраб. затвора
+Total Mirror	Всего подъёмов зеркала
+Total Shots	Всего снимков
+Internal Temp	Температура EFIC
+Ambient light	Внешний свет
+Battery level	Заряд батареи
+Module info	О модуле
+Module	Модуль
+Show console	Показать консоль
+Modules debug	Отладка модулей
+Disable all modules	Отключить все модули
+Load modules after crash	Запустить модули после сбоя
+Show hidden modules	Скрытые модули
+Save config	Сохранить настройки
+Save configuration	Сохранить настройки
+Restore defaults	Сброс настроек
+Config files	Файлы настроек
+Config file	Файл настроек
+Config AutoSave	Автосохранение
+Movie REC key	Кнопка записи видео
+Movie Restart	Перезапуск записи
+Movie logging	Журнал видеозаписи
+FPS override	Переопределение FPS
+FPS Override	Переопределение FPS
+Shutter Lock	Фиксация выдержки
+HDR video	HDR-видео
+HDR Video	HDR-видео
+RAW video	RAW-видео
+RAW video (MLV)	RAW-видео (MLV)
+RAW video (MLV Lite)	RAW-видео (MLV Lite)
+Resolution	Разрешение
+Aspect ratio	Пропорции кадра
+Frame rate	Частота кадров
+Card warm-up	Подготовка карты
+Preview	Предпросмотр
+HalfShutter	Полунажатие
+Always	Всегда
+Never	Никогда
+Photo	Фото
+Video	Видео
+Movie mode	Видеорежим
+Photo mode	Фоторежим
+Manual	Вручную
+Automatic	Автоматически
+Save	Сохранить
+Load	Загрузить
+Cancel	Отмена
+Restart	Перезапуск
+Menu language	Язык меню
+Russian	Русский
+Scripts	Скрипты
+Games	Игры
+Display language. Internal menu names stay in English.	Язык экрана. Внутренние имена остаются английскими.
+Gain applied to both inputs in analog domain (preferred).	Аналоговое усиление обоих каналов (рекомендуется).
+Digital gain (not recommended, use only for headphones!)	Цифровое усиление: только для наушников!
+Digital gain (LEFT). Any nonzero value reduces quality.	Усиление слева. Любое ненулевое значение снижает качество.
+Digital gain (RIGHT). Any nonzero value reduces quality.	Усиление справа. Любое ненулевое значение снижает качество.
+Automatic Gain Control - turn it off :)	Автоматическое усиление звука: рекомендуется отключить.
+Audio input: internal / external / both / balanced / auto.	Микрофон: встроен. / внешн. / оба / балансный / авто.
+High pass filter for wind noise reduction.	Подавление низкочастотного шума ветра.
+Needed for int. and some other mics, but lowers impedance.	Питание встроенного и некоторых внешних микрофонов.
+Monitoring via A-V jack. Disable if you use a SD display.	Звук через A/V. Отключите при использовании SD-монитора.
+Output volume for audio monitoring (headphones only).	Громкость мониторинга звука (только наушники).
+Standard	Стандартный
+Color Space	Цветовое пространство
+When recording	При записи
+Use RAW zebras	Зебра по RAW
+Raw zebra underexposure	Порог недодержки RAW
+Filter bias	Смещение фильтра
+Method	Метод
+Display type	Вид индикации
+Grayscale image	Чёрно-белый экран
+Magnification	Увеличение
+Focus confirm	Подтвержд. фокуса
+Look-up Table	Таблица LUT
+Palette      	Палитра
+Histogram type	Тип гистограммы
+RAW EV indicator	Индикатор RAW EV
+Scaling	Масштаб
+Clip warning	Контроль пересвета
+Waveform Size	Размер осциллограммы
+Level Indicator	Электронный уровень
+Show Overlay FPS	Частота индикации
+LV Display Presets	Пресеты экрана LV
+Global Draw settings	Параметры индикации
+RAW	RAW
+RGB	RGB
+Luma	Яркость
+Small	Малый
+Medium	Средний
+Large	Большой
+Top	Сверху
+Bottom	Снизу
+Left	Слева
+Right	Справа
+Center	По центру
+Red	Красный
+Green	Зелёный
+Blue	Синий
+White	Белый
+Yellow	Жёлтый
+Black	Чёрный
+Linear	Линейный
+Logarithmic	Логарифмический
+Show	Показать
+Hide	Скрыть
+# Configuration, navigation and general UI; photographic terminology deferred.
+Config options	Настройки конфига ML
+SET at startup	SET при запуске
+Bypass loading ML	Обход запуска ML
+Required to load ML	Нужна для запуска ML
+Config preset	Набор настроек
+Save config now	Сохранить сейчас
+Restore ML defaults	Сбросить настройки ML
+Config auto save, manual save, restore defaults...	Автосохранение, ручное сохранение и сброс настроек.
+[GLOBAL] If you hold the SET button pressed at camera startup:	[ОБЩЕЕ] Если удерживать SET при включении камеры:
+Choose a configuration preset.	Выберите набор настроек.
+If enabled, ML settings are saved automatically at shutdown.	Если включено, настройки ML сохраняются при выключении.
+Save ML settings to current preset directory.	Сохранить настройки ML в папку текущего набора.
+This restores ML default settings, by deleting all CFG files.	Возврат к исходным настройкам ML: удаляются ВСЕ файлы CFG.
+To change this setting: Prefs -> Config options	Изменить: Настройки -> Настройки ML
+Press INFO	Нажмите INFO
+Context help	Справка по пункту
+Open submenu (Q)	Открыть подменю (Q)
+Open submenu	Открыть подменю
+Joystick long-press	Удерживать джойстик
+... like this :)	... вот так :)
+Edit values	Изменить значения
+Edit in LiveView	Изменить в LiveView
+Press PicStyle	Нажмите PicStyle
+Overlays (PLAY only)	Индикация (в PLAY)
+Shortcuts (LV only)	Быстрые кнопки (LV)
+Key Shortcuts	Быстрые кнопки
+Arrow/SET shortcuts	Стрелки и SET
+Lens Info Prefs	Данные объектива
+Lens info	Об объективе
+Name	Название
+Serial num	Серийный номер
+Version	Версия
+Read-only.	Только просмотр.
+Speed	Скорость
+Fast	Быстро
+Normal (OFF)	Обычно (ВЫКЛ)
+Auto-Hide	Автоскрытие
+Memory Browser	Просмотр памяти
+Pointer dereference	Переход по указателю
+Val string	Значение: строка
+Display memory contents in real-time (hexdump).	Просмотр памяти в реальном времени (hexdump).
+Address to be analyzed. Press Q to select the digit to edit.	Адрес для просмотра. Кнопкой Q выберите изменяемую цифру.
+Value as hex.	Значение в шестнадцатеричном виде.
+Value as int32.	Значение в формате int32.
+Value as string.	Значение в виде строки.
+Screenshot after 10 seconds => VRAMx.BMP.	Снимок экрана через 10 секунд => VRAMx.BMP.
+The screenshot will contain BMP and YUV overlays.	Снимок экрана содержит слои BMP и YUV.
+Take a screenshot for each ML menu.	Сделать снимок экрана каждого меню ML.
+Display a test pattern to see the color palette.	Показать тестовую цветовую палитру.
+Show properties as they change.	Показывать свойства при их изменении.
+Change camera bootflag status	Изменить флаг загрузки камеры.
+Displays the tasks started by Canon and Magic Lantern.	Показать задачи Canon и Magic Lantern.
+Task info: name, priority, stack memory usage.	Задача: имя, приоритет, использование стека памяти.
+Percentage	Проценты
+Display total CPU usage (percentage).	Показать общую загрузку процессора в процентах.
+Display GUI events (button codes).	Показать события интерфейса (коды кнопок).
+Keep console shown after modules were loaded	Оставлять консоль на экране после загрузки модулей.
+Diagnostic options for modules.	Настройки диагностики модулей.
+For troubleshooting.	Для поиска неисправностей.
+Load modules even after camera crashed and you took battery out.	Загружать модули и после сбоя с извлечением батареи.
+If modules have .hid files, show them anyway. Requires restart.	Показывать и модули с файлами .hid. Нужен перезапуск.
+Free Memory	Свободная память
+Allocated RAM	Выделенная RAM
+Delete config	Удалить конфиг
+Reset setup	Сбросить настройки
+Show script	Показать скрипт
+Run script	Запустить скрипт
+Select script	Выбрать скрипт
+Require long press	Требовать удержания
+Allowed actions	Разрешённые действия
+# Terminology approved by the user, 2026-10-26.
+Focus box settings	Настройки рамки фокуса
+Snap points	Точки привязки
+Focus Distance Units	Единицы измерения дист.
+# Remaining general values and help observed in the QEMU UI audit.
+Speaker Volume	Громкость динамика
+Beep, test tones	Сигналы и тестовые тоны
+Enable Beeps	Включить сигналы
+Tone Waveform	Форма сигнала
+Tone Frequency	Частота сигнала
+Play test tone	Воспроизвести тестовый тон
+Test beep sound	Проверить звуковой сигнал
+Square	Прямоугольный
+Sine	Синусоидальный
+White Noise	Белый шум
+Volume for ML beeps and WAV playback (1-5).	Громкость сигналов ML и воспроизведения WAV (1-5).
+Configure ML beeps and play test tones (440Hz, 1kHz...)	Настройка сигналов ML и тестовых тонов (440 Гц, 1 кГц...).
+Enable beep signal for misc events in ML.	Звуковые сигналы при различных событиях ML.
+Type of waveform to be generated: square, sine, white noise.	Форма сигнала: прямоугольный, синусоидальный, белый шум.
+Frequency for ML beep and test tones (Hz).	Частота сигналов ML и тестовых тонов (Гц).
+Play a 5-second test tone with current settings.	Воспроизвести тестовый тон на 5 секунд с текущими настройками.
+Play a short beep which will be used for ML events.	Воспроизвести короткий сигнал для событий ML.
+FullScreen	На весь экран
+Top-Left	Сверху слева
+Top-Right	Сверху справа
+Bottom-Right	Снизу справа
+Bottom-Left	Снизу слева
+Focus box	Рамка фокуса
+Center (OFF)	Центр (ВЫКЛ)
+Center/Top/Right	Центр/Верх/Право
+Center/T/R/B/L	Центр/В/П/Н/Л
+Center/TL/TR/BR/BL	Центр и углы
+Center + 8 pts	Центр + 8 точек
+ON, all modes	ВКЛ, все режимы
+QuickReview default	Быстрый просмотр
+ON (fast zoom)	ВКЛ (быстро)
+SinglePress -> 100%	Одно нажатие -> 100%
+Full zoom on AF pt.	Макс. зум по точке AF
+Full Z on last pos.	Макс. зум в последней точке
+Compare Images	Сравнение снимков
+Protect Image	Защитить снимок
+Rate Image	Оценить снимок
+Options for PLAY (image review) mode.	Настройки режима просмотра снимков PLAY.
+Several helpful image actions you can trigger in PLAY mode.	Действия со снимками в режиме PLAY.
+Chose the action type to perform when triggered.	Выберите действие для выполнения при запуске.
+Either use a key combination and/or just an easier single keystroke.	Используйте сочетание кнопок или отдельную кнопку.
+Faster zoom in Play mode, for pixel peeping :)	Быстрое увеличение в PLAY для проверки отдельных пикселей.
+Remember last Zoom position in playback mode.	Запоминать положение увеличения при просмотре.
+You may use the LiveView button to protect images quickly.	Кнопкой LiveView можно быстро защищать снимки.
+Can select between Metric and Imperial focus distance units	Выбор единиц дистанции: метрические или футы и дюймы.
+Tweaks for LiveView focus box: move faster, snap to points.	Рамка фокуса LiveView: быстрое движение и привязка к точкам.
+Move the focus box faster (in LiveView).	Быстрее перемещать рамку фокуса в LiveView.
+Snap the focus box to preset points (press CENTER key)	Привязка рамки фокуса к точкам: нажмите центр джойстика.
+You can hide the focus box (the little white rectangle).	Скрывать рамку фокуса (маленький белый прямоугольник).
+Size of zoom box (small / medium / large).	Размер окна увеличения: малый, средний, большой.
+Size of zoom box (small / medium / large / full screen).	Размер окна: малый, средний, большой, на весь экран.
+Position of zoom box (fixed or linked to focus box).	Положение окна: фиксированное или по рамке фокуса.
+1:1 displays recorded pixels, 2:1 displays them doubled.	1:1 - пиксель в пиксель; 2:1 - двукратное увеличение.
+Waveform size: Small / Large / FullScreen.	Размер осциллограммы: малый, большой, на весь экран.
+Choose between YUV-based (JPG) or RAW-based histogram.	Гистограмма по YUV (JPG) или по RAW.
+If RAW data is not available, it will fall back to YUV-based.	Если данные RAW недоступны, используется YUV.
+This feature only works in movie mode.	Функция работает только в режиме видео.
+This feature only works in photo mode.	Функция работает только в режиме фото.
+This feature only works in LiveView.	Функция работает только в LiveView.
+This feature does not work in LiveView.	Функция не работает в LiveView.
+This feature requires autofocus enabled.	Для этой функции нужно включить автофокус.
+This feature requires manual focus.	Для этой функции нужна ручная фокусировка.
+This feature requires a chipped (electronic) lens.	Для этой функции нужен объектив с электронным чипом.
+This feature requires Manual (M) mode.	Для этой функции нужен ручной режим (M).
+This feature requires manual ISO.	Для этой функции задайте ISO вручную.
+Sound recording was disabled by FPS override.	Запись звука отключена переопределением FPS.
+Sound recording is disabled. Enable it from Canon menu.	Запись звука отключена. Включите её в меню Canon.
+Disable sound recording from Canon menu!	Отключите запись звука в меню Canon!
+GlobalDraw is disabled, check your settings.	Индикация отключена: проверьте настройки.
+GlobalDraw is OFF.	Индикация выключена.
+Press INFO (outside ML menu) to turn Canon displays off.	Нажмите INFO вне меню ML, чтобы скрыть индикацию Canon.
+Magic Zoom is disabled.	Magic Zoom выключен.
+Focus Stacking is disabled.	Focus Stacking выключен.
+Module disabled. Press Pict.Style for more info.	Модуль выключен. Подробнее: нажмите Pict.Style.
+EFIC chip temperature (somewhere on the mainboard).	Температура чипа EFIC на основной плате.
+EFIC chip temperature (raw values).	Температура чипа EFIC (сырые значения).
+# Additional terminology approved by the user.
+Exposure Fusion	Слияние экспозиций
+Timelapse Play	Просмотр таймлапса
+Gradual Exposure	Плавная экспозиция
+Focus Patterns	Схемы точек AF
+LV DIGIC peaking	Focus Peaking (LV)
+# Submenus and explanatory help, next review batch.
+REC key	Кнопка REC
+Movie Tweaks	Настройки видео
+REC/STBY notify	Индикация REC/STBY
+Force LiveView	Принудительный LiveView
+Ramping speed	Скорость изменения
+Center selection	Центральная схема
+Horizontal selection	Горизонтальная схема
+Vertical selection	Вертикальная схема
+Shortcut keys	Быстрые кнопки
+Image Fine-tuning	Тонкая настройка изображения
+Creative Effects	Творческие эффекты
+Exposure Adjust	Коррекция экспозиции
+Memory patches	Патчи памяти
+Start recording by pressing shutter halfway. Wired remote.	Запись полунажатием спуска, в том числе пультом.
+If ON, you have to hold half-shutter pressed for 1 second.	Если включено, удерживайте полунажатый спуск 1 секунду.
+Select actions for half-shutter.	Выберите действия при полунажатии спуска.
+ON (1s)	ВКЛ (1 с)
+Start/Stop	Запуск/Остановка
+Start only	Только запуск
+Stop only	Только остановка
+Use smooth exposure transitions, by compensating with ISO.	Плавное изменение экспозиции за счёт компенсации ISO.
+=> adjust ISO, shutter speed and aperture without large jumps.	=> Меняйте ISO, выдержку и диафрагму без резких скачков.
+How fast the exposure transitions should be.	Скорость плавного изменения экспозиции.
+1 EV / 8 frames	1 EV / 8 кадров
+1 EV / 16 frames	1 EV / 16 кадров
+1 EV / 32 frames	1 EV / 32 кадра
+1 EV / 64 frames	1 EV / 64 кадра
+1 EV / 128 frames	1 EV / 128 кадров
+1 EV / 256 frames	1 EV / 256 кадров
+1 EV / 512 frames	1 EV / 512 кадров
+Movie Restart, Movie Logging, REC/Standby Notify...	Перезапуск записи, журнал видео и индикация REC/STBY.
+Auto-restart movie recording, if it happens to stop.	Автоматически возобновлять запись видео после её остановки.
+Custom REC/STANDBY notifications, visual or audible	Световая или звуковая индикация записи и ожидания.
+Beep, start/stop	Сигнал при запуске/остановке
+Blue LED	Синий светодиод
+Always use LiveView (with manual lens or after lens swap).	Всегда включать LiveView: с ручным объективом или после смены.
+Lock shutter value in movie mode (change from Expo only).	Фиксировать выдержку в видео. Изменение только в Экспозиции.
+Tip: it prevents you from changing it by mistake.	Защищает от случайного изменения выдержки.
+Custom AF patterns (photo mode only). Ported from 400plus.	Кастом схемы AF для фоторежима. Перенесено из 400plus.
+Select a center-based AF pattern with LEFT and RIGHT keys.	Выберите центральную схему AF кнопками влево и вправо.
+Select a horizontal AF pattern with LEFT and RIGHT keys.	Выберите горизонтальную схему AF кнопками влево и вправо.
+Select a vertical AF pattern with LEFT and RIGHT keys.	Выберите вертикальную схему AF кнопками влево и вправо.
+Choose patterns outside ML menu, display OFF, arrows+SET.	Выбор схем вне меню ML: экран выключен, стрелки и SET.
+Show memory addresses patched in Canon code or data areas.	Адреса изменённых участков кода и данных Canon в памяти.
+Subtle image enhancements via DIGIC register tweaks.	Тонкая настройка изображения через регистры DIGIC.
+Experimental image filters found by digging into DIGIC.	Экспериментальные фильтры изображения через DIGIC.
+Change H.264 bitrate. Be careful, recording may stop!	Изменение битрейта H.264. Осторожно: запись может прерваться!
+Firmware default / CBR (recommended) / VBR (very risky)	Настройки Canon / CBR (рекомендуется) / VBR (высокий риск).
+1.0x = Canon default, 0.4x = 30minutes, 1.4x = fast card.	1.0x - штатный Canon; 0.4x - 30 минут; 1.4x - быстрая карта.
+Quality factor (-16 = best quality). Try not to use it!	Коэффициент качества: -16 - лучшее. Не рекомендуется менять!
+A = average, B = instant bitrate, Q = instant QScale.	A - средний битрейт; B - текущий битрейт; Q - текущий QScale.
+ML will pause CPU-intensive graphics if buffer gets full.	При заполнении буфера ML приостановит ресурсоёмкую индикацию.
+You may get higher bitrates if you record sound separately.	При отдельной записи звука возможен более высокий битрейт.
+Time indicator while recording.	Индикатор времени во время записи.
+Bit Rate (CBR)	Битрейт (CBR)
+Bit Rate (VBR)	Битрейт (VBR)
+FW default	Настройки Canon
+Separate WAV	Отдельный WAV
+Elapsed	Прошло
+Remain.Card	Осталось на карте
+Remain.4GB	До предела 4 ГБ
+Changes FPS. Also disables sound and alters shutter speeds.	Меняет FPS, отключает звук и изменяет выдержку.
+Tip: in photo mode, it makes LiveView usable in darkness.	В фоторежиме помогает использовать LiveView в темноте.
+Desired FPS	Нужная частота FPS
+Actual FPS	Фактическая FPS
+Optimize for	Оптимизировать для
+Shutter range	Диапазон выдержек
+FPS timer A	Таймер FPS A
+FPS timer B	Таймер FPS B
+Main Clock	Основная частота
+FPS value for recording. Video will play back at Canon FPS.	FPS при записи. Воспроизведение - с частотой FPS Canon.
+Changing FPS has side effects - choose what's best for you:	Изменение FPS имеет побочные эффекты. Выберите приоритет:
+Shutter speed range, when Canon shows 1/30-1/4000.	Диапазон выдержек, когда Canon показывает 1/30-1/4000.
+You can fine-tune this, but don't expect miracles.	Возможна точная подстройка, но её возможности ограничены.
+Timing generator freq. (READ-ONLY). FPS = F/timerA/timerB.	Частота генератора (только просмотр). FPS = F/таймерA/таймерB.
+Exact FPS (computed). For fine tuning, change timer values.	Расчётная точная FPS. Для подстройки меняйте таймеры.
+Sound goes out of sync, so it has to be recorded separately.	Звук рассинхронизируется, поэтому записывается отдельно.
+# Case-sensitive display variants of previously approved names.
+Movie Logging	Журнал видеозаписи
+ML Digital ISO	Цифровое ISO ML
+# Image terminology approved by the user; SS ZeroCross remains English.
+Vignetting	Виньетирование
+Black Level	Уровень чёрного
+Absolute Zero Sharpness	Полное отключение резкости
+Edge Emphasis	Подчёркивание контуров
+Desaturate	Обесцвечивание
+Negative	Негатив
+Swap U-V	Перестановка U/V
+Cartoon Look	Мультяшный эффект
+Green Bars	Зелёные полосы
+SplitScreen	Разделённый экран
+# Remaining image help and finite status strings, next review batch.
+Vignetting correction or effects.	Коррекция виньетирования или создание эффекта.
+Mid-range correction     	Коррекция средней зоны
+Corner correction        	Коррекция углов
+Extreme corner correction	Коррекция крайних углов
+Correction applied between central area and corners.	Коррекция между центральной областью и углами кадра.
+Tip: set this to -1 for a nice vignette effect.	Для эффекта виньетирования установите -1.
+Correction with a stronger bias towards corners.	Коррекция с более сильным воздействием на углы кадра.
+ISO tweaks. Negative gain has better highlight roll-off.	Настройка ISO. Отрицательное усиление смягчает переход в светах.
+Adjust dark level, as with 'dcraw -k'. Fixes green shadows.	Уровень чёрного ('dcraw -k'). Убирает зелёный оттенок теней.
+Shutter fine-tuning	Точная настройка выдержки
+Fine-tune shutter speed in approx 20-microsecond increments.	Точная настройка выдержки с шагом примерно 20 микросекунд.
+Disable sharpening completely (below Canon's zero level).	Полностью отключить резкость, ниже нулевого уровня Canon.
+Darken sharp edges in bright areas.	Затемнять чёткие контуры в светлых областях.
+Grayscale recording. Use WB or pic styles for fine tuning.	ЧБ запись. Настройте баланс белого и стили.
+Negative image. Inverts all colors :)	Негативное изображение. Инвертирует все цвета.
+Swaps U and V channels (red <--> blue).	Меняет местами каналы U и V (красный <--> синий).
+Cartoonish look obtained by emphasizing the edges.	Мультяшный эффект за счёт подчёркивания контуров.
+Mode 1	Режим 1
+Mode 2	Режим 2
+Mode 3	Режим 3
+Zoom box for checking focus. Can be used while recording.	Окно увеличения для проверки фокуса. Работает при записи.
+Trigger Magic Zoom by focus ring or half-shutter.	Запуск Magic Zoom кольцом фокуса или полунажатием спуска.
+Zoom when recording / trigger from focus ring / Zoom button	Увеличение при записи, запуск кольцом фокуса или кнопкой зума.
+How to show focus confirmation (green bars / split screen).	Подтверждение фокуса: зелёные полосы или разделённый экран.
+1 (OFF)	1 (ВЫКЛ)
+1.0x (default)	1.0x (по умолчанию)
+FW default(reboot)	Настройки Canon (перезапуск)
+Restart your camera.	Перезапустите камеру.
+Be careful, high bitrates and sound recording don't mix.	Осторожно: высокий битрейт плохо совместим с записью звука.
+Be careful, recording may stop.	Осторожно: запись может прерваться.
+Be careful, image quality may be bad.	Осторожно: качество изображения может ухудшиться.
+Be careful, bitrate is not constant, recording may stop.	Осторожно: битрейт непостоянный, запись может прерваться.
+How many pictures to take at once (for each trigger event).	Число снимков за одно срабатывание.
+For intervalometer, motion detect, trap focus, audio remote.	Для интервалометра, детектора движения, Trap Focus и звукового пульта.
+Save metadata for each movie, e.g. MVI_1234.LOG	Сохранять метаданные каждого видео, например MVI_1234.LOG.
+Options for reducing power consumption during idle times.	Настройки снижения энергопотребления во время простоя.
+Powersave always works during standby; optionally also while recording.	Экономия энергии при ожидании и, по выбору, во время записи.
+With the LCD sensor you may wakeup or force powersave mode.	Датчик приближения: выход из экономии энергии или её включение.
+Shortcut key for enabling powersave modes right away.	Быстрая кнопка немедленного включения экономии энергии.
+Dim LCD display in LiveView when idle, to save power.	Затемнять экран LiveView при простое для экономии энергии.
+Turn off display. Will also pause LiveView if not recording.	Выключать экран. Вне записи также приостанавливается LiveView.
+Turn off GlobalDraw when idle, to save some CPU cycles.	Отключать индикацию при простое.
+Prevent Canon firmware from turning off LiveView after 30 minutes.	Не давать Canon отключать LiveView через 30 минут.
+# Startup and notifications; \n and \r encode real line endings within a record.
+This is a development snapshot for testing purposes.	Это тестовая сборка Magic Lantern для проверки.
+Please report all bugs at www.magiclantern.fm.	Сообщайте об ошибках на www.magiclantern.fm.
+Be careful using it for production work.      	Осторожно при использовании на ответственных съёмках.
+Enjoy!	Приятной работы!
+(Press any camera button to enter ML settings)	(Нажмите любую кнопку камеры для входа в настройки ML)
+404 Undocumented Feature	404: нет документации
+This feature is probably not yet documented.	Эта функция, вероятно, ещё не описана.
+After all, we are programmers, not tech writers.	Мы программисты, а не авторы документации.
+But... you can simply try it and see what it does.	Можно попробовать функцию и посмотреть, что она делает.
+Then, write a short paragraph to describe it,	Затем кратко опишите её работу,
+and we will include it in the user guide.	и мы добавим описание в руководство.
+Thanks!	Спасибо!
+Restart your camera to complete the process.	Перезапустите камеру для завершения операции.
+Module dir missing	Нет папки модулей
+Too many modules	Слишком много модулей
+Missing symbol file: 5D2_212.sym	Нет файла символов: 5D2_212.sym
+Camera was not shut down cleanly.\r\nSkipping module loading.	Камера выключена некорректно.\nЗагрузка модулей пропущена.
+DISPLAY OFF...	ВЫКЛЮЧЕНИЕ ЭКРАНА...
+DISPLAY AND SENSOR OFF...	ВЫКЛЮЧЕНИЕ ЭКРАНА И СЕНСОРА...
+LCD brightness is automatic.\nML will not dim the display.	Яркость экрана автоматическая.\nML не будет затемнять экран.
+Canon sound disabled	Запись звука Canon отключена
+Please switch to LiveView	Переключитесь в LiveView
+Please switch to photo mode	Переключитесь в фоторежим
+Please enable autofocus	Включите автофокус
+Please switch to Movie mode.	Переключитесь в видеорежим.
+Focus stack done!	Focus Stacking завершён!
+Focus stack not completed	Focus Stacking не завершён
+Rack Focus: REC Start	Rack Focus: запуск записи
+Rack Focus: REC Stop	Rack Focus: остановка записи
+Trap Focus: ON	Trap Focus: ВКЛ
+Trap Focus: OFF	Trap Focus: ВЫКЛ
+Saving core dump, please wait...\n	Сохранение дампа памяти. Подождите...\n
+Pls send COREDUMP.DAT to ML devs.\n	Отправьте COREDUMP.DAT разработчикам ML.\n
+Saving debug log...	Сохранение журнала отладки...
+Done :)	Готово :)
+Dumping VRAMs...	Сохранение видеобуферов...
+
+# Approved 2026-10-27: LV presets and the 5D2 CBR range 1.1x..3.0x.
+OFF (1)	ВЫКЛ (1)
+up to 1.1x	до 1.1x
+up to 1.2x	до 1.2x
+up to 1.3x	до 1.3x
+up to 1.4x	до 1.4x
+up to 1.5x	до 1.5x
+up to 1.6x	до 1.6x
+up to 1.7x	до 1.7x
+up to 1.8x	до 1.8x
+up to 1.9x	до 1.9x
+up to 2.0x	до 2.0x
+up to 2.1x	до 2.1x
+up to 2.2x	до 2.2x
+up to 2.3x	до 2.3x
+up to 2.4x	до 2.4x
+up to 2.5x	до 2.5x
+up to 2.6x	до 2.6x
+up to 2.7x	до 2.7x
+up to 2.8x	до 2.8x
+up to 2.9x	до 2.9x
+up to 3.0x	до 3.0x
+
+# User-edited context batch, approved 2026-10-27.
+Num. of LV display presets. Switch with INFO or from LiveV.	Число пресетов LV. Переключение: INFO или меню LV.
+Config preset is selected by startup mode (on the mode dial).	Конфиг выбирается режимом на диске при включении.
+At startup, press&hold MENU/PLAY/INFO to select the cfg preset.	Выбор конфига: при включении держите MENU/PLAY/INFO.
+The new config preset will be used after you restart your camera.	Новый конфиг будет применён после перезапуска камеры.
+Only the current preset: %s	Только текущий конфиг: %s
+Camera was started in %s; restart to load the config for %s.	При включении: %s. Для конфига %s перезапустите камеру.
+Restart to load the config for %s mode.	Перезапустите камеру для загрузки конфига режима %s.
+Config: %s	Конфиг: %s
+Enable/disable ML overlay graphics (zebra, cropmarks...)	Индикация ML: зебра, рамки кадрирования и другое.
+Zebra stripes: show overexposed or underexposed areas.	Зебра: показ пересвеченных и недоэкспонированных областей.
+Luma: red/blue. RGB: show color of the clipped channel(s).	Luma: красный/синий. RGB: цвет каналов с пересветом.
+Underexposure threshold.	Порог недоэкспонирования.
+Overexposure threshold.	Порог пересвета.
+You can hide zebras when recording.	Скрывать зебру во время записи.
+Use RAW zebras if possible.	По возможности использовать RAW-зебру.
+RAW zebra underexposure threshold	Порог недоэкспонирования RAW-зебры
+(in EVs above the noise floor)	(в EV над уровнем шума)
+Show which parts of the image are in focus.	Показ областей изображения в фокусе.
+Fine-tune the focus detection algorithm:	Точная настройка алгоритма определения фокуса:
+Contrast detection method. 2: more accurate, 1: less noisy.	Метод определения контраста: 2 - точнее, 1 - меньше шума.
+How to display peaking. Alpha looks nicer, but image lags.	Вывод Focus Peaking. Alpha: лучше вид, но есть задержка.
+How many pixels are considered in focus (percentage).	Доля пикселей, считающихся в фокусе, в процентах.
+Focus peaking color (fixed or color coding).	Цвет Focus Peaking: фиксированный или цветовая кодировка.
+Display LiveView image in grayscale.	Чёрно-белое изображение LiveView.
+LUT for increasing contrast in the zoom box.	LUT для повышения контраста в окне увеличения.
+Overlay any image in LiveView. In PLAY mode, press LV btn.	Наложение снимка в LiveView. Для выбора: PLAY, затем LV.
+Update the overlay whenever you take a picture.	Обновлять наложение после каждого снимка.
+Exposure aid: display brightness from a small spot.	Контроль экспозиции: яркость небольшой области.
+Measurement unit for brightness level(s).	Единицы измерения яркости.
+Spotmeter position: center or linked to focus box.	Точечный замер: по центру или по рамке фокуса.
+Exposure aid: each brightness level is color-coded.	Контроль экспозиции: каждому уровню яркости свой цвет.
+False color palettes for exposure, banding, green screen...	Палитры False Color: экспозиция, banding, зелёный фон.
+Exposure aid: shows the distribution of brightness levels.	Контроль экспозиции: распределение уровней яркости.
+Choose an EV image indicator to display on the histogram.	Выбор EV-индикатора изображения на гистограмме.
+Linear or logarithmic histogram.	Линейная или логарифмическая гистограмма.
+Display warning dots when one color channel is clipped.	Точки предупреждения о пересвете в цветовом канале.
+Numbers represent the percentage of pixels clipped.	Числа показывают процент пересвеченных пикселей.
+Exposure aid: useful for checking overall brightness.	Контроль экспозиции: оценка общей яркости.
+Electronic level indicator in 0.5 degree steps.	Электронный уровень с шагом 0.5 градуса.
+Show the frame rate of overlay loop (zebras, peaking...)	Частота обновления индикации: зебра, Focus Peaking и другое.
+
+# Approved choice values and bounded display composition, 2026-10-27
+Startup mode	По режиму при включении
+Startup key	По кнопке при включении
+Photo only	Только фото
+Strong edges	Чёткие контуры
+Balanced	Сбалансированный
+Fine details	Мелкие детали
+Global Focus	Общий уровень фокуса
+Local Focus	Локальный уровень фокуса
+Banding detection	Выявление banding
+GreenScreen	Зелёный фон
+Percent	Проценты
+Percent RGB	Проценты RGB
+RGB (Percent)	RGB (проценты)
+Log	Логарифмический
+LumaFast	Яркость (быстро)
+RAW N/A	RAW недоступен
+Luma (YUV)	Яркость (YUV)
+Luma, over 99%	Яркость, выше 99%
+LumaFast, over 99%	Яркость (быстро), выше 99%
+RGB, under 10%	RGB, ниже 10%
+Luma, 10..99%	Яркость, 10..99%
+Percent, AFbox	Проценты, рамка AF
+0..255, AFbox	0..255, рамка AF
+RGB, AFbox	RGB, рамка AF
+RAW, AFbox	RAW, рамка AF
+Percent RGB, AFbox	Проценты RGB, рамка AF
+Luma (YUV), Linear	Яркость (YUV), линейный
+RGB (YUV), Log	RGB (YUV), логарифм.
+RAW N/A, Linear	RAW недоступен, линейный
+RAW N/A, Log	RAW недоступен, логарифм.
+ON,1.0,global	ВКЛ,1.0,общий
+ON,1.0,local,Gray	ВКЛ,1.0,локальный,ЧБ
+%s, over %d%%	%s, выше %d%%
+%s, under %d%%	%s, ниже %d%%
+%s, %d..%d%%	%s, %d..%d%%
+ON,%d.%d,%s%s	ВКЛ,%d.%d,%s%s
+global	общий
+local	локальный
+,Gray	,ЧБ
+, AFbox	, рамка AF
+, Linear	, линейный
+, Log	, логарифм.
+
+# Batch of 200 approved with user wording, 2026-10-27
+Do not load ML if you start the camera with SET pressed (default)	Не загружать ML с зажатым SET (по умолчанию).
+Load ML only if SET is pressed at startup (optional)	Загружать ML, только если при включении зажат SET (опция).
+Dump all image buffers (LV, HD, RAW) from current video mode.	Сохранить все буферы текущего видеорежима: LV, HD, RAW.
+The camera may turn into a 1DX or it may explode.	Камера может стать 1DX, а может и взорваться.
+Task info: ID, name, priority, wait_id, mem, state.	Задачи: ID, имя, приоритет, wait_id, память, состояние.
+Display the image buffer sizes (LiveView and Craw).	Показать размеры буферов изображения: LiveView и Craw.
+Number of pics taken + number of LiveView actuations	Число снимков плюс число включений LiveView.
+Battery remaining. Wait for 2% discharge before reading.	Остаток заряда. Перед замером дождитесь разряда на 2%.
+Takes a picture when the subject comes in focus. MF only.	Снимок при попадании объекта в фокус. Только MF.
+Focus with arrow keys. MENU while REC = save focus point.	Фокус стрелками. MENU при REC: сохранить точку фокуса.
+[Q]: fix here rack end point. SET+L/R: start point.	[Q]: конечная точка Rack Focus. SET+L/R: начальная.
+Press SET for rack focus, or PLAY to also start recording.	SET: Rack Focus. PLAY: также запустить видеозапись.
+Takes pictures at different focus points.	Снимки с фокусировкой на разных дистанциях.
+Run the focus stacking sequence.	Запустить серию Focus Stacking.
+Tip: press MENU to interrupt the stacking sequence.	Для прерывания серии Focus Stacking нажмите MENU.
+Number of shots in front of current focus point.	Число снимков перед текущей точкой фокуса.
+On some lenses, this may be reversed.	На некоторых объективах направление может быть обратным.
+Number of shots behind current focus point.	Число снимков за текущей точкой фокуса.
+Number of focus steps between two pictures.	Число шагов фокусировки между двумя снимками.
+Seconds between stack segments to let flashes recycle.	Пауза между этапами Focus Stacking для вспышек, с.
+Sets up stack focus to use the same range as rack focus.	Использовать для Focus Stacking диапазон Rack Focus.
+Tuning parameters and prefs for rack/stack/follow focus.	Настройки Rack Focus, Focus Stacking и Follow Focus.
+Step size for focus commands (same units as in EOS Utility)	Размер шага фокусировки, в тех же единицах, что EOS Utility.
+Delay between two successive focus commands.	Задержка между двумя командами фокусировки.
+Wait for 'focus done' signal before sending next command.	Ждать завершения фокусировки перед следующей командой.
+Focus direction for Left and Right keys.	Направление фокусировки для стрелок влево и вправо.
+Focus direction for Up and Down keys.	Направление фокусировки для стрелок вверх и вниз.
+Number of seconds before starting focus operation.	Задержка перед началом фокусировки, в секундах.
+Settings about Depth of Field info displays.	Настройки отображения глубины резкости (ГРИП).
+Circle of confusion used for DOF calculations.	Кружок нерезкости для расчёта ГРИП.
+Default value: 19 for APS-C and 29 for full-frame cameras.	По умолчанию: 19 для APS-C, 29 для полного кадра.
+Formula for computing the depth of field:	Формула расчёта глубины резкости:
+Simple: only consider defocus blur, ignoring diffraction effects.	Простая: только расфокусировка, без учёта дифракции.
+Diffraction-aware: consider both defocus and diffraction blur.	С дифракцией: учёт расфокусировки и дифракции.
+Display DOF above Focus distance, in LiveView.	Показывать ГРИП над дистанцией фокусировки в LiveView.
+High values = lower FPS, more jello effect, faster shutter.	Больше: ниже FPS, усилить эффект желе, короче выдержка.
+High values = lower FPS, shutter speed converges to 1/fps.	Больше: ниже FPS, выдержка приближается к 1/FPS.
+Keep the same exposure (brightness) as with default FPS.	Сохранять яркость, как при стандартной частоте кадров.
+This works by lowering ISO => you may get pink highlights.	Снижение ISO сохраняет яркость; возможен розовый в светах.
+Sync FPS with shutter speed, for long exposures in LiveView.	Связать FPS с выдержкой для длинных выдержек в LiveView.
+Ramp between overridden FPS and default FPS. Undercrank only.	Плавная смена FPS. Только при FPS ниже штатной.
+Duration of FPS ramping (in real-time, not in playback).	Время смены FPS при съёмке, не при просмотре.
+Alternates ISO between frames. Flickers while recording.	Чередование ISO между кадрами. При записи видно мерцание.
+ISO value for one half of the frames.	ISO для одной половины кадров.
+ISO value for the other half of the frames.	ISO для другой половины кадров.
+Show current lens name (as reported by your lens or adapter).	Имя объектива, переданное объективом или адаптером.
+Show current lens focal length.	Показать текущее фокусное расстояние объектива.
+Read-only. Zoom lenses are only updated in LiveView.	Только чтение. У зумов обновляется лишь в LiveView.
+Show current lens ID. Should match exiftool TEST.CR2 -LensType -b.	ID объектива. Сверка: exiftool TEST.CR2 -LensType -b.
+Read-only. Lenses from different manufacturers may have the same ID.	Только чтение. У разных производителей ID могут совпадать.
+Show current lens serial number. Not all cameras report this.	Серийный номер объектива. Доступен не на всех камерах.
+Read-only. Should match exiftool TEST.CR2 -LensSerialNumber .	Только чтение. Сверка: exiftool TEST.CR2 -LensSerialNumber .
+Show current lens version string.	Показать строку версии объектива.
+Show current lens capability bits.	Показать биты возможностей объектива.
+Show current lens extender information byte.	Показать байт сведений об экстендере объектива.
+Exposure Compensation	Экспокоррекция
+Free memory, shared between ML and Canon firmware.	Свободная память, общая для ML и прошивки Canon.
+Press SET for detailed info.	Для подробных сведений нажмите SET.
+Total memory allocated by ML. Press SET for detailed info.	Вся память, выделенная ML. Подробнее: SET.
+Free memory available as stack space for user tasks.	Свободная память для стеков пользовательских задач.
+Largest contiguous block from shoot memory.	Наибольший непрерывный блок памяти съёмки.
+Largest fragmented block from shoot memory.	Наибольший фрагментированный блок памяти съёмки.
+Free memory from SRM_AllocateMemoryResourceFor1stJob.	Свободная память SRM_AllocateMemoryResourceFor1stJob.
+Memory reserved statically at startup for ML binary.	Память под код ML, статически выделенная при запуске.
+Advanced bracketing (expo, flash, DOF). Press shutter once.	Брекетинг: экспозиция, вспышка, ГРИП. Одно нажатие спуска.
+Choose the variables to bracket:	Выберите параметры для брекетинга:
+Expo bracket. M: changes shutter. Others: changes AEcomp.	Экспозиция: в M меняется выдержка, иначе экспокоррекция.
+Flash bracket: change flash exposure compensation.	Брекетинг вспышки: изменение её экспокоррекции.
+DOF bracket: keep exposure constant, change Av/Tv ratio.	Брекетинг ГРИП: менять Av/Tv, сохраняя экспозицию.
+Number of bracketed shots. Can be computed automatically.	Число кадров брекетинга. Возможен автоматический расчёт.
+Exposure difference between two frames.	Разница экспозиции между двумя кадрами.
+Bracketing sequence order / type. Zero is always first.	Порядок и тип брекетинга. Нулевой кадр всегда первый.
+Take darker images.	Снимать более тёмные кадры.
+Take dark, bright, even darker, even brigther images, in that order	По порядку: тёмный, светлый, ещё темнее, ещё светлее.
+Take brighter images.	Снимать более светлые кадры.
+Delay before starting the exposure.	Задержка перед началом экспонирования.
+Only used if you start bracketing by pressing the shutter.	Только при запуске брекетинга кнопкой спуска.
+Also use ISO as bracket variable. Range: 100 - max AutoISO.	Брекетинг также по ISO: от 100 до максимума Auto ISO.
+Full: try ISO bracket first. If out of range, use main var.	Полный: сначала ISO;вне диапазона - основной параметр.
+Half: Bracket with both ISO (50%) and main variable (50%).	Половина: брекетинг по ISO (50%) и основному параметру (50%).
+Take pictures at fixed intervals (for timelapse).	Снимки с заданным интервалом для таймлапса.
+Duration between two shots.	Интервал между двумя снимками.
+How to trigger the intervalometer start:	Способ запуска интервалометра:
+When you exit ML menu, or at camera startup.	При выходе из меню ML или при включении камеры.
+On half-shutter press.	При полунажатии кнопки спуска.
+After you take the first picture.	После первого сделанного снимка.
+Start the intervalometer after X seconds / minutes / hours.	Запуск интервалометра через X секунд, минут или часов.
+Stop the intervalometer after taking X shots.	Остановить интервалометр после X снимков.
+For very long exposures (several minutes).	Для очень длинных выдержек: несколько минут.
+To trigger, hold shutter pressed halfway for 1 second.	Для запуска удерживайте полунажатие спуска 1 секунду.
+Turn the screen on/off while taking bulb exposure.	Включать или выключать экран при выдержке Bulb.
+Audio RemoteShot	Спуск по звуку
+Clap your hands or pop a balloon to take a picture.	Хлопните в ладоши или лопните шарик для спуска затвора.
+Trigger level (dB)	Порог срабатывания (дБ)
+Picture taken when sound level becomes X dB above average.	Снимок при превышении среднего уровня звука на X дБ.
+Take a picture when subject is moving or exposure changes.	Снимок при движении объекта или изменении экспозиции.
+Choose when the picture should be taken:	Выберите условие спуска затвора:
+EXP: reacts to exposure changes (large movements).	EXP: изменение экспозиции при крупных движениях.
+DIF: detects smaller movements that do not change exposure.	DIF: малые движения без изменения экспозиции.
+STDY: take pic if there's little or no motion (cam steady).	STDY: снимок при малом движении, когда камера неподвижна.
+Higher values = less sensitive to motion.	Чем выше значение, тем ниже чувствительность к движению.
+Size of the area on which motion shall be detected.	Размер области обнаружения движения.
+Delay between the detected motion and the picture taken.	Задержка от обнаружения движения до снимка.
+MLU tricks: hand-held or self-timer modes.	Предподъём зеркала: с рук или с автоспуском.
+Choose when mirror lock-up should be active:	Когда использовать предподъём зеркала:
+Always ON: just the Canon mode, press shutter twice.	Всегда: режим Canon, два нажатия кнопки спуска.
+Self-Timer: MLU setting will be linked to Canon self-timer.	Автоспуск: связать предподъём с автоспуском Canon.
+Handheld: trick to reduce camera shake. Press shutter once.	С рук: снижение дрожания, одно нажатие кнопки спуска.
+At what shutter speeds you want to use handheld MLU.	Выдержки для предподъёма зеркала при съёмке с рук.
+Delay between mirror and shutter movement.	Задержка между подъёмом зеркала и спуском затвора.
+MLU delay used with intervalometer, bracketing etc.	Задержка предподъёма: интервалометр, брекетинг и др.
+Autofocus, number of pics to take at once...	Автофокус, число снимков за один запуск и другое.
+For intervalometer, audio remote shot and motion detect.	Для интервалометра, спуска по звуку и детектора движения.
+Be careful, won't take pics if it can't autofocus.	Внимание: снимка не будет, если автофокус не сработает.
+Post-processing scripts for bracketing and focus stacking.	Скрипты обработки брекетинга и Focus Stacking.
+Scripts for sorting intervalometer sequences.	Скрипты сортировки серий интервалометра.
+You can take virtual (fake) pictures just for testing.	Виртуальные снимки без съёмки для проверки настроек.
+Disable x5 or x10, boost contrast/sharpness...	Отключение зума x5/x10, усиление контраста и резкости.
+Disable x5 zoom in LiveView.	Отключить увеличение x5 в LiveView.
+Disable x10 zoom in LiveView.	Отключить увеличение x10 в LiveView.
+Auto adjusts exposure, so you can focus manually wide open.	Автоэкспозиция для ручного фокуса при открытой диафрагме.
+Increase sharpness and contrast when you zoom in LiveView.	Усилить резкость и контраст при увеличении в LiveView.
+Enable zoom when you hold the shutter halfway pressed.	Разрешить увеличение при полунажатой кнопке спуска.
+This feature only works as long as you don't trigger autofocus.	Работает только до запуска автофокусировки.
+Zoom when you turn the focus ring (only some Canon lenses).	Зум от кольца фокуса. Только некоторые объективы Canon.
+Adjust Kelvin white balance and GM/BA WBShift.	Баланс белого в Кельвинах и сдвиг GM/BA.
+Advanced: WBShift, RGB multipliers, Push-button WB...	Дополнительно: сдвиг ББ, множители RGB, ББ по кнопке.
+Adjust Kelvin white balance.	Настроить баланс белого в Кельвинах.
+Green-Magenta white balance shift, for fluorescent lights.	Сдвиг ББ зелёный-пурпурный для люминесцентного света.
+Blue-Amber WBShift; 1 unit = 5 mireks on Kelvin axis.	Сдвиг ББ синий-янтарный: 1 шаг = 5 майред.
+RED channel multiplier, for custom white balance.	Множитель КРАСНОГО канала для ручного баланса белого.
+GREEN channel multiplier, for custom white balance.	Множитель ЗЕЛЁНОГО канала для ручного баланса белого.
+BLUE channel multiplier, for custom white balance.	Множитель СИНЕГО канала для ручного баланса белого.
+LiveView: adjust Kelvin and G-M once (Push-button WB).	LiveView: однократная настройка Кельвина и G-M по кнопке.
+Adjust and fine-tune ISO. Also displays APEX Sv value.	Точная настройка ISO. Также показано значение APEX Sv.
+Advanced: digital ISO tweaks, HTP, ISO 50, ISO 800.000...	Дополнительно: цифровое ISO, HTP, ISO 50, ISO 800.000.
+ISO equivalent (analog + digital components).	Эквивалент ISO: аналоговая и цифровая составляющие.
+Analog ISO component (ISO at which the sensor is driven).	Аналоговая составляющая ISO: чувствительность матрицы.
+Canon's digital ISO component. Strongly recommended: 0.	Цифровая составляющая ISO Canon. Рекомендуется: 0.
+Fine-tune shutter value. Displays APEX Tv or degrees equiv.	Точная настройка выдержки. Показаны APEX Tv или градусы.
+Adjust aperture. Also displays APEX aperture (Av) in stops.	Настроить диафрагму. Также показано APEX Av в ступенях.
+Change current picture style.	Изменить текущий стиль изображения.
+Adjust sharpness in current picture style.	Настроить резкость текущего стиля изображения.
+Adjust contrast in current picture style.	Настроить контраст текущего стиля изображения.
+Adjust saturation in current picture style.	Настроить насыщенность текущего стиля изображения.
+Adjust color tone in current picture style.	Настроить цветовой тон текущего стиля изображения.
+You can use a different picture style when recording.	Для видеозаписи можно выбрать другой стиль изображения.
+In M mode, adjust Tv/Av/ISO without changing exposure.	В режиме M менять Tv/Av/ISO, сохраняя экспозицию.
+It may change the way you use M mode. Maybe I'm just crazy.	Возможно, вы иначе взглянете на режим M. А может, я чудак.
+When you change Tv, ML adjusts Av and ISO to keep exposure.	При смене Tv ML меняет Av/ISO, сохраняя экспозицию.
+When you change Av, ML adjusts Tv and ISO to keep exposure.	При смене Av ML меняет Tv/ISO, сохраняя экспозицию.
+When you change ISO, ML adjusts Tv and Av to keep exposure.	При смене ISO ML меняет Tv/Av, сохраняя экспозицию.
+Quickly toggle between two expo presets (ISO,Tv,Av,Kelvin).	Быстрая смена двух наборов ISO, Tv, Av и Кельвина.
+LEFT/RIGHT: input gain. UP/DOWN: output gain. SET: Input.	Влево/вправо: усиление входа; вверх/вниз: выхода. SET: вход.
+LEFT/RIGHT: ISO. UP/DN: Kelvin white balance. SET: PushWB.	Влево/вправо: ISO; вверх/вниз: Кельвин; SET: ББ по кнопке.
+LEFT/RIGHT: Shutter. UP/DN: Aperture.  SET: 180d shutter.	Влево/вправо: выдержка; вверх/вниз: диафрагма; SET: 180 град.
+LEFT/RIGHT: LCD bright. UP/DN: LCD saturation. SET: reset.	Влево/вправо: яркость LCD; вверх/вниз: цветность; SET: сброс.
+Enables functions for SET when you use arrow shortcuts.	Функции SET при использовании быстрых настроек стрелками.
+Misc options related to shortcut keys.	Дополнительные настройки быстрых клавиш.
+Makes the DOF preview button sticky (press to toggle).	Фиксация просмотра ГРИП. Нажатие переключает режим.
+Makes the half-shutter button sticky (press to toggle).	Полунажатие спуска как переключатель
+Warn if some of your settings are changed by mistake.	Предупреждать о случайном изменении настроек.
+Warn if you turn the mode dial to some other position.	Предупреждать при повороте диска режимов.
+Warn if you change the picture quality to something else.	Предупреждать при изменении качества изображения.
+Warn if you enable ALO by mistake.	Предупреждать о случайном включении ALO.
+Warn if you disable AWB by mistake.	Предупреждать о случайном отключении AWB.
+Warn on Manual / Automatic Focus	Предупреждать о смене ручного и автоматического фокуса.
+Warn type, LED, Messagebox, Beep	Способ предупреждения: LED, сообщение, звуковой сигнал.
+Exposure simulation (LiveView display type).	Имитация экспозиции: режим отображения LiveView.
+Focus peaking via DIGIC. No CPU usage!	Focus Peaking через DIGIC без нагрузки на процессор.
+For LiveView preview only. Does not affect recording.	Только предпросмотр LiveView. На запись не влияет.
+Boost on WB: increase saturation when you are adjusting WB.	Усиление при ББ: повышать насыщенность при настройке ББ.
+Makes LiveView usable in complete darkness (photo mode).	LiveView в полной темноте. Только фоторежим.
+Tip: if it gets really dark, also enable FPS override.	При очень слабом свете также включите изменение FPS.
+Clear bitmap overlays from LiveView display.	Убрать графические наложения с экрана LiveView.
+Preview straightened images from fisheye lenses. LV+PLAY.	Выпрямленный предпросмотр для fisheye-объективов. LV+PLAY.
+Stretches LiveView image vertically, for anamorphic lenses.	Растянуть LiveView по вертикали для анаморфной оптики.
+Screen orientation, position fine-tuning...	Ориентация экрана и точная настройка положения.
+Position of top/bottom bars, useful for external displays.	Положение верхней и нижней полос для внешних экранов.
+Color scheme for bitmap overlays (ML menus, Canon menus...)	Цветовая схема графики: меню ML, Canon и другие элементы.
+May make the image easier to see from difficult angles.	Может улучшить видимость экрана под неудобным углом.
+Displays overlay graphics upside-down and flips arrow keys.	Перевернуть индикацию и направления стрелок вверх ногами.
+Crazy color effects that may help with white balance.	Необычные цветовые эффекты для настройки баланса белого.
+Swap U-V: reverses red and blue components	Swap U-V: поменять красную и синюю составляющие.
+Extreme Chroma: highly saturated image showing WB direction	Extreme Chroma: высокая насыщенность показывает сдвиг ББ.
+Force low resolution (720x480) on HDMI displays.	Принудительно включить HDMI 720x480.
+When you set "ImageReview: Hold", it will go to Play mode.	При ImageReview: Hold переходить в режим просмотра.
+Delete files quickly with SET+Erase (be careful!!!)	Быстрое удаление: SET+Erase. Будьте осторожны!
+Strong edges: looks for edges, works best in low light.	Чёткие контуры: поиск границ, лучше при слабом свете.
+Balanced: tries to cover both strong edges and fine details.	Сбалансированный: чёткие контуры и мелкие детали.
+Fine details: looks for microcontrast. Needs lots of light.	Мелкие детали: микроконтраст. Нужно много света.
+Percentage of overall brightness level.	Общая яркость в процентах.
+8 bit RGB level.	8-битный уровень RGB.
+HTML like color codes.	Коды цветов в формате HTML.
+Negative value from clipping, in EV (RAW).	Уровень относительно порога пересвета RAW, в EV
+RGB color in Percentage.	Значения каналов RGB в процентах.
+Display the dynamic range at current ISO, from noise stdev.	ДД при текущем ISO. По стандартному отклонению шума.
+Show how many stops you can push the exposure to the right.	Запас сдвига экспозиции вправо, в ступенях.
+To start ramping, press INFO or just start recording.	Для плавной смены FPS нажмите INFO или начните запись.
+Choose functions for arrows keys. Toggle w. PicStyle.	Функции стрелок. Переключение: PicStyle.
+
+# Batch of 214 approved; Expo. Override wording by user, 2026-10-27
+AGC is enabled.	AGC включена.
+Headphone monitoring is disabled	Контроль звука в наушниках выключен.
+Low Z	Низкий импеданс
+High Z	Высокий импеданс
+Mic power is required by internal mic, can't turn off.	Встроенному микрофону нужно питание. Отключить нельзя.
+Internal mic	Встроенный микрофон
+L:int R:ext	Л: встроенный, П: внешний
+External stereo	Внешний стереомикрофон
+L:int R:balanced	Л: встроенный, П: балансный
+Auto int/ext	Авто: встроенный/внешний
+2 dB (digital)	2 дБ (цифровое)
+4 dB (digital)	4 дБ (цифровое)
+6 dB (digital)	6 дБ (цифровое)
+Beeps disabled to prevent interference with audio recording.	Сигналы отключены, чтобы не мешать записи звука.
+CBR mode inactive => CBR setting not used.	Режим CBR неактивен: настройка CBR не используется.
+This is only an upper limit for the bitrate.	Это только верхний предел битрейта.
+VBR mode inactive => QScale setting not used.	Режим VBR неактивен: настройка QScale не используется.
+Bitrate may vary a lot (several orders of magnitude!)	Битрейт может меняться на несколько порядков!
+Unknown partition :(	Неизвестный раздел :(
+Undo	Отменить
+Focus stacking not configured.	Focus Stacking не настроен.
+Arrows	Стрелки
+Trap focus outside LiveView requires a chipped lens	Trap Focus вне LiveView требует объектив с чипом.
+Assign AF button to half-shutter from CFn!	В CFn назначьте автофокус на полунажатие спуска!
+Hold AF button	Удерживать кнопку AF
+Continuous	Непрерывно
+Simple	Простая
+Diffraction-aware	С учётом дифракции
+Sound recording must be disabled from Canon menu.	Выключите запись звука в меню Canon.
+FPS value is computed from photo shutter speed.	FPS рассчитывается по выдержке для фото.
+Start recording to find out the vertical resolution.	Начните запись для определения вертикального разрешения.
+Internal error - please report to ML devs.	Внутренняя ошибка. Сообщите разработчикам ML.
+FPS ramping disabled.	Плавная смена FPS выключена.
+You need to disable gradual exposure.	Нужно выключить плавную экспозицию.
+Low light	Слабый свет
+Exact FPS	Точная FPS
+Low Jello, 180d	Слабее эффект желе, 180 град.
+HiJello, FastTv	Усилить эффект желе, короткая Tv
+Low light: at low FPS, use 1/FPS (360 deg) shutter speeds.	Слабый свет: при низкой FPS выдержка 1/FPS (360 град.).
+Exact FPS: for 24.000 instead of 23.976 and similar.	Точная FPS: например, 24.000 вместо 23.976.
+Low Jello, 180d: for 1/2fps shutter speed (1/20 at 10fps).	Слабее желе, 180 град.: выдержка 1/(2*FPS), 1/20 при 10 FPS.
+HiJello, FastTv: jello effects and fast shutters (2-5 fps).	Усилить эффект желе: 2-5 FPS, короткая выдержка.
+Rolling shutter	Эффект rolling shutter
+Constant expo	Постоянная экспозиция
+Sync w. Shutter	Связать с выдержкой
+FPS ramping	Плавная смена FPS
+Ramp duration	Время смены FPS
+Will use Histobar in LiveView, RAW histogram after taking a pic.	В LiveView: HistoBar; после снимка: RAW-гистограмма.
+Will use RAW histogram in LiveView and after taking a pic.	RAW-гистограмма в LiveView и после снимка.
+EV indic	Индикатор EV
+Focus: soft limit reached	Фокус: достигнут программный предел
+Focus not confirmed	Фокус не подтверждён
+(no lens)	(нет объектива)
+(none)	(нет)
+mm/cm	мм/см
+ft/in	футы/дюймы
+Focal len	Фокусное расстояние
+Lens ID	ID объектива
+Capability	Возможности
+Extender	Экстендер
+Clock	Часы
+Disp preset	Пресет экрана
+Pic Quality	Качество снимков
+Pic.Style	Стиль изображения
+Temperature	Температура
+MVI number	Номер MVI
+Free space	Свободное место
+Focus dist	Дистанция фокуса
+Battery	Батарея
+Press SET to choose MyMenu items or hide what you don't use.	SET: выбрать пункты Моего меню или скрыть ненужные.
+Back to 'beginner' mode.	Возврат в простой режим.
+Advanced options for experts. Use with care.	Расширенные настройки для опытных. Будьте осторожны.
+Help files not found	Файлы справки не найдены
+OFF, will not load	ВЫКЛ, не загрузится
+This module will no longer be loaded at next reboot.	Этот модуль не загрузится после перезапуска.
+ON, will load	ВКЛ, загрузится
+This module will be loaded at next reboot.	Этот модуль загрузится после перезапуска.
+(nonexistent)	(отсутствует)
+Build date	Дата сборки
+Last update	Последнее обновление
+Help page	Страница справки
+More info after you load this module.	Дополнительные сведения появятся после загрузки модуля.
+Sound is disabled.	Звук выключен.
+Temporarily disabled (auto exposure on zoom).	Временно отключено: автоэкспозиция при увеличении.
+Temporarily disabled (display gain active).	Временно отключено: усиление изображения активно.
+Temporarily disabled.	Временно отключено.
+Red Crossout	Красное перечёркивание
+Start & CPUlens	При запуске и с чипованным объективом
+Expo. Override	Принудительная экспозиция ML
+Low-level manual exposure controls (bypasses Canon limits).	Управление экспозицией в обход ограничений Canon.
+Useful for long exposures, manual lenses, manual video ctl.	Для длинных выдержек, ручной оптики и ручного видео.
+LCD brightness is auto in Canon menu. It won't work.	В меню Canon включена автояркость LCD. Здесь не работает.
+Only works when 'Auto power off' is disabled in Canon menu.	Нужно выключить автоотключение питания в меню Canon.
+Other ML features may use the options below (e.g. intervalometer in LV).	Также для функций ML, например интервалометра в LV.
+LED will blink every 10s. WARNING: this limit is there for good reason!	LED мигает каждые 10 с. Внимание: лимит задан не зря!
+[MOVIE] This feature requires you shooting RAW.	[ВИДЕО] Эта функция требует съёмки в RAW.
+[PHOTO] Set picture quality to RAW in Canon menu.	[ФОТО] Выберите качество RAW в меню Canon.
+Has no effect when trigger is set to take a pic	Не действует при запуске после первого снимка.
+Also useful to trigger off of motion or trap focus	Также для запуска от детектора движения или Trap Focus.
+Use M mode to avoid exposure flicker.	Используйте режим M, чтобы избежать мерцания экспозиции.
+Shoot wide-open or unscrew lens to avoid aperture flicker.	От мерцания: откройте диафрагму или отверните объектив.
+Use slow shutter speeds to avoid shutter flicker.	Длинная выдержка уменьшает мерцание от затвора.
+Use manual white balance to avoid WB flicker.	Ручной баланс белого предотвращает мерцание цвета.
+Disable autofocus.	Выключите автофокус.
+Disable image stabilization.	Выключите стабилизацию изображения.
+Press shutter halfway and be careful (tricky feature).	Полунажмите спуск. Осторожно: функция непростая.
+With current settings, motion detect only works in LiveView.	Эти настройки детектора движения требуют LiveView.
+Try zooming first	Сначала попробуйте увеличить изображение
+Please switch to photo mode.	Переключитесь в фоторежим.
+Shutter speed is automatic - cannot adjust manually.	Выдержка автоматическая. Ручная настройка недоступна.
+Aperture is automatic - cannot adjust manually.	Диафрагма автоматическая. Ручная настройка недоступна.
+Manual lens - cannot adjust aperture.	Ручной объектив. Управление диафрагмой недоступно.
+Extended WB values are only applied to movies, not photos.	Расширенный ББ действует только на видео, не на фото.
+Custom white balance is not active => not used.	Ручной баланс белого не выбран: настройка не используется.
+Adjusting white balance...	Настройка баланса белого...
+Adjusting white balance shift...	Настройка сдвига баланса белого...
+Not working on SD monitors.	Не работает с SD-мониторами.
+Turn off Canon bracketing (AEB)!	Выключите брекетинг Canon (AEB)!
+Autodetect	Автоопределение
+Long exposure tools may use bulb timer value, even if BT is disabled.	Другие функции могут брать время Bulb и при ВЫКЛ.
+Bulb timer only works in BULB mode	Таймер Bulb работает только в режиме BULB.
+SelfTimer (ON)	Автоспуск (ВКЛ)
+SelfTimer (OFF)	Автоспуск (ВЫКЛ)
+Handheld	С рук
+Always ON	Всегда ВКЛ
+No burst bracketing series, please.	Не используйте серийную съёмку с брекетингом.
+Autofocus and bracketing don't mix.	Автофокус несовместим с брекетингом.
+Exposure (Tv,Ae)	Экспозиция (Tv,Ae)
+Exposure (Flash)	Экспозиция (вспышка)
+DOF (Aperture)	ГРИП (диафрагма)
+Full	Полный
+Half	Половина
+Leave Menu	Выход из меню
+Half Shutter	Полунажатие спуска
+Take a Pic	Первый снимок
+Don't change	Не менять
+Turn off	Выключить
+Show previous pic	Предыдущий снимок
+Expo. change	Изменение экспозиции
+Frame diff.	Разница кадров
+Steady hands	Неподвижная камера
+Self-Timer	Автоспуск
+All values	Все значения
+Align+Enfuse	Выравнивание + Enfuse
+File List	Список файлов
+Disable	Отключить
+Press SET	Нажмите SET
+Bracketing stopped.	Брекетинг остановлен.
+Intervalometer stopped.	Интервалометр остановлен.
+Bulb timer canceled.	Таймер Bulb отменён.
+Usable in complete darkness; try with FPS Override or Bulb Timer.	Для темноты: попробуйте изменение FPS или таймер Bulb.
+Expo Override is active, LiveView exposure may be incorrect.	Принудительная экспозиция ML: возможна ошибка яркости LV.
+LiveView exposure may be incorrect. Enable expo override to fix it.	При неверной яркости LV: принудительная экспозиция ML.
+other than M	кроме M
+other than Av	кроме Av
+other than Tv	кроме Tv
+other than P	кроме P
+other than RAW	кроме RAW
+other than fine	кроме высокого качества
+other than OFF	кроме ВЫКЛ
+other than AWB	кроме AWB
+other than AF	кроме AF
+other than MF	кроме MF
+LED, popup, beep	LED, сообщение, звук
+LED, popup, rep. beep	LED, сообщение, повтор звука
+LED, popup	LED, сообщение
+Photo, no ExpSim	Фото, без имитации экспозиции
+Photo, ExpSim	Фото, с имитацией экспозиции
+Focus peaking with grayscale preview is enabled.	Focus Peaking включён с чёрно-белым предпросмотром.
+Auto (normal)	Авто (обычная)
+Auto (low)	Авто (низкая)
+Auto (very low)	Авто (очень низкая)
+Does not work on external monitors.	Не работает с внешними мониторами.
+Too much for this lil' cam... both defishing and anamorphic	Слишком тяжело: коррекция fisheye и анаморф одновременно.
+Slightly sharper	Чуть резче
+Edge image	Контурное изображение
+Edge + chroma	Контуры + цветность
+Zero	Ноль
+Very low	Очень низкая
+Grayscale	Чёрно-белый
+Boost on WB adjust	Усиление при настройке ББ
+WhenIdle	При простое
+Recording	При записи
+Rectilinear	Прямолинейная
+Dark	Тёмная
+Bright Gray	Светло-серая
+Dark Gray	Тёмно-серая
+Dark Red	Тёмно-красная
+Dark Green	Тёмно-зелёная
+Extreme Chroma	Экстремальная цветность
+Left/Right	Влево/вправо
+L/R & Set+Dial	L/R и SET+диск
+CanonMnu:Hold->PLAY	Меню Canon: Hold -> PLAY
+Shows color distribution as U-V plot. For grading & WB.	Распределение цвета на графике U-V. Для цвета и ББ.
+UV scaling	Масштаб UV
+Scaling for input signal (useful with flat picture styles).	Масштаб входного сигнала для плоских стилей изображения.
+Not used for RAW zebras.	Не используется для RAW-зебры.
+Magic Zoom does not work with SD monitors	Magic Zoom не работает с SD-мониторами.
+Magic Zoom does not work in HDMI 1080i.	Magic Zoom не работает с HDMI 1080i.
+After using display filters, go outside LiveView and back.	После экранных фильтров выйдите из LiveView и вернитесь.
+Magic Zoom does not work well in current video mode	Magic Zoom плохо работает в текущем видеорежиме.
+Full-screen Magic Zoom does not work in crop mode	Полноэкранный Magic Zoom не работает в кроп-режиме.
+Magic Zoom is not available in this mode	Magic Zoom недоступен в этом режиме.
+Luma Fast	Яркость (быстро)
+Cyan	Голубой
+Focus Ring	Кольцо фокуса
+FocusR+HalfS	Кольцо фокуса + полунажатие
+Always On	Всегда включено
+YUV-based, Luma	По YUV, яркость
+YUV-based, RGB	По YUV, RGB
+RAW-based (RGB)	По RAW (RGB)
+RAW HistoBar (MAX)	RAW HistoBar (максимум)
+Dynamic Range	Динамический диапазон
+ETTR hint	Подсказка ETTR
+
+# Final 439 approved display records; Volume wording by user.
+ExpSim is OFF.	Имитация экспозиции выключена.
+Display Gain is active.	Усиление изображения активно.
+LEFT 	ЛЕВЫЙ
+AGC:%s%d.%03d dB	AGC:%s%d.%03d дБ
+Microphone %s	Микрофон: %s
+connected	есть
+disconnected	нет
+L INT	Л ВСТР
+R INT	П ВСТР
+R EXT	П ВНЕШ
+L EXT	Л ВНЕШ
+R BAL	П БАЛ
+External Stereo	Внешний стереомикрофон
+Auto int/EXT	Авто: встроенный/ВНЕШНИЙ
+Auto INT/ext	Авто: ВСТРОЕННЫЙ/внешний
+Headphones %s	Наушники: %s
+Input: %s	Вход: %s
+(dB)	(дБ)
+Volume: %d + (%d,%d) dB	Громкость: %d + (%d,%d) дБ
+Out Volume: %d dB	Громкость выхода: %d дБ
+FW default%s	Штатный%s
+(reboot)	(перезапуск)
+ (default)	 (по умолчанию)
+Bit Rate (CBR) : %d.%dx	Битрейт (CBR): %d.%dx
+Bit Rate (VBR) : QScale %d	Битрейт (VBR): QScale %d
+Will dump VRAMs in %d s...	Сохранение буферов изображения через %d с...
+Unmounted SD card.\n	SD-карта отключена.\n
+You may now copy files remotely on your wifi card.\n	Теперь можно копировать файлы на Wi-Fi-карту удалённо.\n
+Press shutter halfway to reboot.\n	Полунажмите спуск для перезапуска.\n
+Crash detected - log file saved.\nPls send CRASH%02d.LOG to ML devs.\n\n%s	Обнаружен сбой. Журнал сохранён.\nПередайте CRASH%02d.LOG разработчикам ML.\n\n%s
+Lets break Guiness World Records (rated lifespan %d).	Побьём рекорды Гиннесса! Ресурс затвора: %d.
+Lifespans are for wimps (rated lifespan %d).	Ресурс затвора для слабаков! Заявлено: %d.
+I hope I get to rated lifespan (rated lifespan %d).	Надеюсь дожить до заявленного ресурса затвора: %d.
+You may get around %d.	Ожидаемый ресурс затвора: около %d.
+%d C, %d F, %d raw	%d C, %d F, сырое значение %d
+Busy tasks (ABS)	Занятые задачи (абс.)
+Busy tasks (REL)	Занятые задачи (отн.)
+Format card, keep ML [PicStyle]	Форматировать, сохранить ML [PicStyle]
+Format card, remove ML [PicStyle]	Форматировать, удалить ML [PicStyle]
+Restart your camera (malloc error).	Перезапустите камеру: ошибка malloc.
+Format: malloc error :(	Форматирование: ошибка malloc :(
+Restart your camera (fio_malloc err).	Перезапустите камеру: ошибка fio_malloc.
+Format: fio_malloc error, retrying...	Форматирование: ошибка fio_malloc. Повтор...
+Format       (ML size: %s%d.%d MB%s)	Форматирование (размер ML: %s%d.%d МБ%s)
+Reading %s...	Чтение %s...
+Restoring %s...	Восстановление %s...
+Could not restore %s :(	Не удалось восстановить %s :(
+Writing bootflags...	Запись загрузочных флагов...
+Bootflags not written, use EosCard	Флаги не записаны. Используйте EosCard.
+Magic Lantern restored :)	Magic Lantern восстановлен :)
+Restarting camera...	Перезапуск камеры...
+ResLock fail %x %x	Ошибка блокировки ресурса %x %x
+EDMAC timeout	Тайм-аут EDMAC
+ML on both cards, loading from SD.	ML на обеих картах. Загрузка с SD.
+Could not find ML files.	Файлы ML не найдены.
+Saving %8x...	Сохранение %8x...
+ISO Range	Диапазон ISO
+Battery Icon	Значок батареи
+MLU	Предподъём зеркала
+Kelvin	Кельвин
+Pics (clear)	Очистка поля снимков
+Pics	Снимки
+Date	Дата
+Build	Сборка
+Lens	Объектив
+Copyright	Авторские права
+GB	ГБ
+Space	Место
+Hrs	ч
+Min	мин
+Sec	с
+(n/a)	(недоступно)
+AutoWB	Авто ББ
+ Sunny	 Солнечно
+ Flash	 Вспышка
+ Shade	 Тень
+inf.	беск.
+%dm	%d м
+%d.%dm	%d.%d м
+%dcm	%d см
+Lens: manual (without chip).	Объектив: ручной, без чипа.
+Lens: %s, %dmm f/%d.%d	Объектив: %s, %d мм f/%d.%d
+Your lens does not report focus distance.	Объектив не сообщает дистанцию фокусировки.
+Focus dist: %s	Дист. фокуса: %s
+ Infty	 беск.
+Hyperfocal: %s	Гиперфокал: %s
+DOF Near:   %s	ГРИП от: %s
+DOF Far:    %s	ГРИП до: %s
+Focus stack	Focus Stacking
+Focus stack: %dx%d	Focus Stacking: %dx%d
+Pre-focusing %d steps...	Предварительная фокусировка: %d шагов...
+Focus stack: %d of %d	Focus Stacking: %d из %d
+Focusing %d steps...	Фокусировка: %d шагов...
+Reversing %d steps...	Обратный ход: %d шагов...
+steps from here	шагов от текущей точки
+(%d pics)	(%d снимков)
+LCD sensor	Датчик LCD
+%dms	%d мс
+Focus point saved here.     \nTo return to it, press PLAY.	Точка фокуса сохранена.\nВозврат к ней: PLAY.
+Roll.sh.%d%%	Rolling sh.%d%%
+%d.%03d (from %d)	%d.%03d (из %d)
+%d (from %d)	%d (из %d)
+Rolling shutter: %s%d.%d ms (%d%%) at %dx%d.	Rolling shutter: %s%d.%d мс (%d%%), %dx%d.
+FPS timer %s	Таймер FPS %s
+%d.%02d MHz	%d.%02d МГц
+FPS override: %d.%03d	Переопределение FPS: %d.%03d
+Average = %03d	Среднее = %03d
+MIN = %03d	МИН = %03d
+%03d = MAX	%03d = МАКС
+delta %03d	разница %03d
+%03d delta	%03d разница
+Double-check GMT_GUICMD consts	Проверьте константы GMT_GUICMD
+OVER	ПЕРЕСВЕТ
+Clip warning  : %s	Пересвет: %s
+Built on %s by %s	Собрано %s, автор %s
+NO LENS NAME	ИМЯ ОБЪЕКТИВА НЕДОСТУПНО
+Night Handheld	Ночная съёмка с рук
+HDR Backlight	HDR-контровой свет
+in	дюйм
+DISP %d	ПРЕСЕТ %d
+ML uses too much memory!!	ML использует слишком много памяти!
+Trying to guess how much RAM we have...	Определение доступного объёма RAM...
+GREEN=shoot, CYAN=srm, BLUE=maybe free, RED=maybe used.	Зел.: shoot; голуб.: srm; синий: свободно? красный: занято?
+, %s used	, занято %s
+Free & used memory from %s. %d blocks allocated.	Память %s: свободно и занято. Выделено блоков: %d.
+%s used	занято %s
+Memory used from %s. %d blocks allocated.	Использование памяти %s. Выделено блоков: %d.
+Max region: %s.	Максимальный блок: %s.
+This allocator does not implement get_max_region.	Этот распределитель не поддерживает get_max_region.
+Would be nice to have at least %s free here.	Здесь желательно иметь хотя бы %s свободной памяти.
+Memory Error	Ошибка памяти
+Allocated memory	Выделенная память
+[FAIL] 	[ОШИБКА] 
+%d tracked small blocks (%s), 	Малых блоков под контролем: %d (%s), 
+%d total (%s), 	всего %d (%s), 
+\noverhead %s (dynamic)	\nнакладные расходы: %s (динамические)
+ + %s (fixed)	 + %s (постоянные)
+ + %s (history)	 + %s (история)
+, peak %s	, пик %s
+Memcheck overhead: %d.%d%%.	Расходы на контроль памяти: %d.%d%%.
+stack space	Память стеков
+shoot contig	Память съёмки: непрерывная
+shoot total	Память съёмки: всего
+SRM job total	Память SRM: всего
+Magic Lantern Firmware version %s (%s)\nBuilt on%s by %s\n%s	Версия Magic Lantern: %s (%s)\nСобрано%s, автор %s\n%s
+Set AF to Half-Shutter from Canon menu (CFn / custom ctrl), or use MF.	В CFn назначьте AF на полунажатие спуска или выберите MF.
+This feature requires %s AF enabled.	Для этой функции нужен включённый AF: %s.
+movie servo	следящий видеофокус
+This feature requires %s AF disabled.	Для этой функции нужен выключенный AF: %s.
+This feature works best with GlobalDraw enabled.	Лучше работает с включённой индикацией ML.
+This feature works best in movie mode.	Лучше работает в видеорежиме.
+This feature works best in photo mode.	Лучше работает в фоторежиме.
+This feature works best in LiveView.	Лучше работает в LiveView.
+This feature works best outside LiveView.	Лучше работает вне LiveView.
+This feature works best with autofocus enabled.	Лучше работает с включённым автофокусом.
+This feature works best with manual focus.	Лучше работает с ручной фокусировкой.
+Set AF to Half-Shutter from Canon menu (CFn / custom ctrl).	В CFn Canon назначьте AF на полунажатие спуска.
+This feature works best in Manual (M) mode.	Лучше работает в ручном режиме M.
+This feature works best with manual ISO.	Лучше работает с ручным ISO.
+Advanced	Расширенный
+Hidden: 	Скрыто: 
+ (Prefs->Customize).	 (Настройки -> Кастомизация).
+Elapsed time: %d ms	Прошло: %d мс
+Magic Lantern version: %s\nGit commit: %s\nBuilt on %s by %s.	Версия Magic Lantern: %s\nКоммит Git: %s\nСобрано %s, автор %s.
+Magic Lantern help files could not be found.              	Файлы справки Magic Lantern не найдены.
+Make sure all ML files are installed to your card.        	Скопируйте на карту все файлы ML.
+See http://wiki.magiclantern.fm/install for instructions. 	Инструкция: http://wiki.magiclantern.fm/install
+Could not load help page %s.	Не удалось загрузить страницу справки %s.
+Magic Lantern menu	Меню Magic Lantern
+Missing symbol file: ML/MODULES/5D2_212.sym	Нет файла символов: ML/MODULES/5D2_212.sym
+Module disabled	Модуль выключен
+Module not loaded	Модуль не загружен
+Seems linking failed. Unknown symbols?	Ошибка связывания. Неизвестные символы?
+Load failed: %s, ret 0x%02X	Сбой загрузки: %s, код 0x%02X
+Linking failed	Ошибка связывания
+Wrong version (v%d.%d, expected v%d.%d)\n	Неверная версия: v%d.%d, нужна v%d.%d\n
+Invalid Magic (0x%X)\n	Неверная сигнатура: 0x%X\n
+No info structure found (addr 0x%X)\n	Структура сведений не найдена: адрес 0x%X\n
+Module init failed	Сбой инициализации модуля
+Module loaded successfully	Модуль успешно загружен
+Passing too many parameters to '%s'	Слишком много параметров передано в '%s'
+%s. Press %s for more info.	%s. Подробнее: нажмите %s.
+You should never see this	Вы не должны видеть это сообщение
+Build user	Пользователь сборки
+Built on %s by %s.	Собрано %s, автор %s.
+Last update: %s	Последнее обновление: %s
+Information:	Сведения:
+Properties (no support):	Свойства (не поддерживаются):
+Callbacks:	Обработчики:
+Shutter Lock  : %s	Блокировка выдержки: %s
+NOT RECORDING	ЗАПИСЬ НЕ ИДЁТ
+Patch error at %x (%s)	Ошибка патча по адресу %x (%s)
+Code	Код
+Data	Данные
+Patch %x overwritten (expected %x, got %x).	Патч %x перезаписан: ожидалось %x, получено %x.
+Patch %x overwritten (expected %x, current value %x).	Патч %x перезаписан: ожидалось %x, сейчас %x.
+%d ERR	Ошибок: %d
+Cache is locked down (not exactly clean).	Кэш заблокирован, но не полностью очищен.
+Patch error at %x (no slot)	Ошибка патча по адресу %x: нет свободного слота
+Patch error at %x (jump out of range)	Ошибка патча по адресу %x: переход вне диапазона
+Unpatch error at %x (%s)	Ошибка отмены патча по адресу %x (%s)
+after %d%s	через %d%s
+sec	с
+min	мин
+(unknown len %d)	(неизвестная длина %d)
+Raw error, falling back to YUV overlays	Ошибка RAW. Используются наложения по YUV.
+Too many fonts	Слишком много шрифтов
+%s not found	%s не найден
+%s not loaded	%s не загружен
+%dh	%d ч
+Timelapse: %dh%02dm, %d shots, %d fps => %02dm%02ds.	Таймлапс: %d ч %02d мин, %d кадров, %d FPS => %02d мин %02d с.
+Take pics...	Снимать...
+like crazy	Без паузы
+Check auto power off setting (currently %ds).	Проверьте автоотключение питания: сейчас %d с.
+%d shots	%d снимков
+Not enough space for %d shots (only for %d).	Не хватает места для %d снимков. Поместится только %d.
+ON, level=%d	ВКЛ, порог=%d
+%s, level=%d	%s, порог=%d
+Boo...	Бу...
+Raw err	Ошибка RAW
+CompareImages: Not in PLAY mode	CompareImages: камера не в режиме PLAY
+%d images  	%d снимков  
+%s multiplier	Множитель %s
+Green 	Зелёный 
+Magenta 	Пурпурный 
+Amber 	Янтарный 
+Blue 	Синий 
+Picture Style : %s	Стиль изображения: %s
+Could not restore ExpSim :(	Не удалось восстановить имитацию экспозиции :(
+%d frames	%d кадров
+%s unnecessary and may cause excessive shutter wear.	%s не требуется и может ускорить износ затвора.
+DOF 	ГРИП 
+Remaining: %d	Осталось: %d
+ Intervalometer: %s  \n Pictures taken: %d  	 Интервалометр: %s\n Сделано снимков: %d
+ (OFF)	 (ВЫКЛ)
+HandH,1/2-1/125	С рук,1/2-1/125
+Handhedld MLU does not work with %s.	Предподъём с рук не работает вместе с %s.
+HDR bracketing	HDR-брекетингом
+trap focus	Trap Focus
+bulb shots	выдержкой Bulb
+motion detection	детектором движения
+Canon bracketing (AEB)	брекетингом Canon (AEB)
+audio remote	спуском по звуку
+This feature does not work with HDR bracketing.	Эта функция не работает с HDR-брекетингом.
+Silent Picture	Тихая съёмка
+Blink & Beep	Мигание и звук
+Saved %s\n%s%04d.JPG ... %s%04d.JPG	Сохранено %s\n%s%04d.JPG ... %s%04d.JPG
+Saved %s	Сохранено %s
+Over :%3d.%02d%%\nUnder:%3d.%02d%%	Пересвет:%3d.%02d%%\nНедосвет:%3d.%02d%%
+Already recording 	Запись уже идёт 
+movie_end: not movie mode (%d,%d) 	movie_end: не видеорежим (%d,%d) 
+movie_end: not recording 	movie_end: запись не идёт 
+ ExpSim 	 Имит.экспозиции 
+Trap Focus:     \nCFn Fail. Set AF\n to shutter btn 	Trap Focus:\nОшибка CFn. AF\nна кнопку спуска
+Trap Focus:     \nIDLE, press half\nshutter shortly 	Trap Focus:\nОЖИДАНИЕ: кратко\nполунажмите спуск
+Trap Focus:     \nACTIVE, keys are\ncurrently locked	Trap Focus:\nАКТИВЕН: кнопки\nзаблокированы
+ Intervalometer: waiting for %s...\n	 Интервалометр: ожидание %s...\n
+first picture	первого снимка
+ Taking picture in %d.%ds   	 Снимок через %d.%d с   
+!!! Auto exposure !!!\nUse M mode and set 'LV display: Movie' from Expo menu	!!! Автоэкспозиция !!!\nВыберите M и Экран LV: Видео в меню Экспозиция
+SD monitors NOT fully supported!\nRGB tools and MZoom won't work. 	SD-мониторы поддерживаются не полностью!\nRGB-индикация и Magic Zoom недоступны.
+[HalfShutter] Bulb timer: %s	[Полунажатие] Таймер Bulb: %s
+[2s] Bulb timer: %s	[2 с] Таймер Bulb: %s
+[1s] Bulb timer: %s	[1 с] Таймер Bulb: %s
+Average exposure: %3d    New exposure: %3d   	Средняя экспозиция: %3d    Новая экспозиция: %3d   
+Motion level: %d   	Уровень движения: %d   
+Interval time too short (%ds)	Интервал слишком короткий: %d с
+Audio release ON (%2d / %2d)	Спуск по звуку ВКЛ (%2d / %2d)
+ML tasks	Задачи ML
+Canon tasks	Задачи Canon
+ML tasks (CPU)	Задачи ML (CPU)
+Canon tasks (CPU)	Задачи Canon (CPU)
+DOF	ГРИП
+via Expo.Override	через экспозицию ML
+Display Gain : %d EV	Усиление изображения: %d EV
+LCD Backlight: %d	Подсветка LCD: %d
+Scrollwheel: %s	Диск: %s
+-Rec	-Зап
+Rec+	Зап+
+Out+	Вых+
+-Out	-Вых
+Input	Вход
+Kel+	Кельвин+
+-Kel	-Кельвин
+PushWB	ББ по кнопке
+180deg	180 град.
+-Bri	-Ярк
+Bri+	Ярк+
+Sat+	Нас+
+-Sat	-Нас
+Reset	Сброс
+Mode is not M%s	Режим отличается от M%s
+Mode is not Av%s	Режим отличается от Av%s
+Mode is not Tv%s	Режим отличается от Tv%s
+Mode is not P%s	Режим отличается от P%s
+Pic quality is not RAW%s	Качество снимков отличается от RAW%s
+Pic quality is not fine%s	Качество снимков отличается от Fine%s
+ALO is enabled%s	ALO включён%s
+WB isn't set to auto%s	Баланс белого не автоматический%s
+Focus is not auto%s	Фокус не автоматический%s
+Focus is not manual%s	Фокус не ручной%s
+Center to x5 RAW	Из центра в RAW x5
+popup, beep	сообщение, звук
+popup, rep. beep	сообщение, повтор звука
+popup only	только сообщение
+rep. popup	повтор сообщения
+LCD Saturation  : %s	Насыщенность LCD: %s
+0 (Grayscale)	0 (чёрно-белый)
+Low	Низкая
+Very high	Очень высокая
+LCD Saturation: Normal\nLCD Backlight : 5     \nDisplay Gain  : 0 EV  	Насыщенность LCD: обычная\nПодсветка LCD: 5\nУсиление изображения: 0 EV
+4:3 display,auto	Экран 4:3, авто
+16:10 HDMI,t/b	HDMI 16:10, верх/низ
+16:9  HDMI,t/b	HDMI 16:9, верх/низ
+Bottom,under 3:2	Внизу, под 3:2
+Bottom,under16:9	Внизу, под 16:9
+-16px	-16 пикс.
+-8px	-8 пикс.
++8px	+8 пикс.
++16px	+16 пикс.
+Set+MainDial	SET+главный диск
+YUV buffer was not initialized.\nPlease take a picture or go to LiveView.	Буфер YUV не готов.\nСделайте снимок или включите LiveView.
+ML/CROPMKS dir missing\nPlease copy all ML files!	Нет папки ML/CROPMKS.\nСкопируйте все файлы ML!
+TOO MANY CROPMARKS (max=%d)	СЛИШКОМ МНОГО РАМОК КАДРИРОВАНИЯ: максимум %d
+LOAD ERROR %d:%s   	ОШИБКА ЗАГРУЗКИ %d:%s   
+Cropmarks are configured only for movie mode	Рамки кадрирования включены только для видео.
+Bitmap (%d/%d)	Рамка (%d/%d)
+Cropmarks or custom grids for framing.	Рамки кадрирования или собственные сетки для композиции.
+Bitmap	Рамка
+You can draw your own cropmarks in Paint.	Собственные рамки можно нарисовать в Paint.
+Show in photo mode	Показывать в фоторежиме
+Cropmarks are mostly used in movie mode.	Рамки кадрирования обычно используют для видео.
+Show in PLAY mode	Показывать в режиме PLAY
+You may also have cropmarks in Playback mode.	Рамки кадрирования также доступны при просмотре снимков.
+Will use RAW RGB zebras %safter taking a pic.	RAW RGB-зебра %sпосле снимка.
+in LiveView and 	в LiveView и 
+Failed to allocate BVRAM mirror	Не удалось выделить память для копии BVRAM
+HalfS, 	Полунаж., 
+Focus, 	Кольцо, 
+ALW, 	Всегда, 
+Small, 	Мал., 
+Med, 	Сред., 
+Large, 	Бол., 
+AFbox, 	Рамка AF, 
+Display preset: %d	Пресет экрана: %d
+Saving overlay...	Сохранение наложения...
+Overlay saved.   	Наложение сохранено.
+Overlay error.   	Ошибка наложения.
+%d seconds => %d fps	%d секунд => %d FPS
+0 dB	0 дБ
+10 dB	10 дБ
+17 dB	17 дБ
+20 dB	20 дБ
+23 dB	23 дБ
+26 dB	26 дБ
+29 dB	29 дБ
+32 dB	32 дБ
+55 Hz (A1)	55 Гц (A1)
+110 Hz (A2)	110 Гц (A2)
+220 Hz (A3)	220 Гц (A3)
+262 Hz (Do)	262 Гц (Do)
+294 Hz (Re)	294 Гц (Re)
+330 Hz (Mi)	330 Гц (Mi)
+349 Hz (Fa)	349 Гц (Fa)
+392 Hz (Sol)	392 Гц (Sol)
+440 Hz (La-A4)	440 Гц (La-A4)
+494 Hz (Si)	494 Гц (Si)
+880 Hz (A5)	880 Гц (A5)
+1 kHz	1 кГц
+1760 Hz (A6)	1760 Гц (A6)
+2 kHz	2 кГц
+3520 Hz (A7)	3520 Гц (A7)
+5 kHz	5 кГц
+12 kHz	12 кГц
+1s	1 с
+2s	2 с
+5s	5 с
+15s	15 с
+30s	30 с
+1min	1 мин
+2min	2 мин
+5min	5 мин
+10min	10 мин
+20min	20 мин
+30min	30 мин
+0.1s	0.1 с
+0.2s	0.2 с
+0.3s	0.3 с
+0.4s	0.4 с
+0.5s	0.5 с
+0.6s	0.6 с
+0.7s	0.7 с
+0.8s	0.8 с
+0.9s	0.9 с
+0.75s	0.75 с
+3s	3 с
+4s	4 с
+%d%%, %dh%02dm, %d%%/h	%d%%, %d ч %02d мин, %d%%/ч
+MIN:%d	МИН:%d
+MAX:%d	МАКС:%d
+Cloudy	Облачно
+Tungst	Лампа
+Fluor.	Люмин.
+Custom	Ручной
+unk	неизв.
+Delaying...	Задержка...
+(here)	(здесь)
+, Rs.%d%%	, RS.%d%%
+0.001% px	0.001% пикс.
+0.01% px	0.01% пикс.
+0.1% px	0.1% пикс.
+1% px	1% пикс.
+Gradual	Плавно
+mm	мм
+half-shutter	полунажатия спуска
+F+HS, 	Кольцо+полунаж., 
+TL, 	ВЛ, 
+TR, 	ВП, 
+BR, 	НП, 
+BL, 	НЛ, 
+, Ss	, РЭ
+, Sz	, SS ZeroCross
+ON, dx=%d, dy=%d	ВКЛ, dx=%d, dy=%d
+%s of 	%s из 
+ON, %s	ВКЛ, %s
+, 2s	, 2 с
+ON, 2x	ВКЛ, 2x
+ASSERT: %s\nat %s:%d, %s:%x\nlv:%d mode:%d\n\n	ПРОВЕРКА: %s\nat %s:%d, %s:%x\nlv:%d mode:%d\n\n
+ML ASSERT:\n%s\nat %s:%d (%s), task %s\nlv:%d mode:%d\n\n	ПРОВЕРКА ML:\n%s\nat %s:%d (%s), task %s\nlv:%d mode:%d\n\n
+ID error,	ошибка ID,
+double free,	повторное освобождение,
+unknown error,	неизвестная ошибка,
+%s[%d/%d] %s(%s) at %s:%d, task %s.	%s[%d/%d] %s(%s), %s:%d, задача %s.
+%s(%s) failed at %s:%d, %s.	Сбой %s(%s): %s:%d, %s.
+No allocator for %s at %s:%d, %s.	Нет распределителя для %s: %s:%d, %s.
+%s%d.%d \x84s / line	%s%d.%d мкс/строку
+Amount of jello effect. Multiply "\x84s/line" by vertical resolution.	Эффект желе: умножьте мкс/строку на число строк.
+Diffraction\nblur: %d\x84m	Дифр. размытие\n%d мкм
+\x86 or Zoom In	\x86 или увеличение
+Complete user guide	Полная справка
+This is a Russian-localized Magic Lantern by dimalishes	Это русифицированная версия Magic Lantern от dimalishes
+Tested on a personal 5D MK2 camera	Протестирована на личной камере 5D MK2
+Be careful when using it	Будьте осторожны при использовании
+for important shoots.	на ответственных съёмках.
+Magic Lantern version: %s	Версия Magic Lantern: %s
+Git commit: %s	Коммит Git: %s

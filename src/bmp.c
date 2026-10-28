@@ -32,6 +32,297 @@
 #include "propvalues.h"
 #include "zebra.h"
 
+#ifdef CONFIG_MENU_RU
+#include "rbf_font.h"
+#include "menu_ru_data.h"
+extern int menu_language_ru;
+
+/* Generic translation uses complete display strings after printf expansion.
+ * Script identifiers, config keys and module files remain unchanged.
+ * Four approved config templates have a separate bounded composer below.
+ * Slots 160..225 extend the RBF fonts; the original ML icons are preserved.
+ * Canon's ROM font has no such mapping, so translated titles use RBF 32px.
+ */
+static const char *menu_ru_display(const char *text, uint32_t *fontspec)
+{
+    if (!menu_language_ru) return text;
+    const char *translated = menu_ru_lookup(text);
+    if (translated == text) return text;
+    uint32_t id = FONT_ID(*fontspec);
+    if (id == FONT_ID(FONT_CANON)) id = FONT_ID(FONT_LARGE);
+    /* User-loaded fonts may use a different high-byte character mapping. */
+    if (id > FONT_ID(FONT_LARGE)) return text;
+    font *f = (font *)font_dynamic[id].bitmap;
+    /* Missing/old font files: keep English instead of drawing missing glyphs. */
+    if (!f || !f->cTable || f->hdr.charLast < 225) return text;
+    *fontspec = (*fontspec & ~0x00070000) | (id << 16);
+    return translated;
+}
+
+/* Keep the additional stack buffer out of the common English/boot path.
+ * The aligned RBF renderer temporarily modifies its input, so a translated
+ * catalog entry must be copied to writable, per-call storage.
+ */
+static __attribute__((noinline)) int menu_ru_draw(
+    uint32_t fontspec, int x, int y, const char *translated)
+{
+    char text[128];
+    size_t len = strlen(translated);
+    if (len >= sizeof(text)) return 0;
+    memcpy(text, translated, len + 1);
+    return rbf_draw_string((void*)font_dynamic[FONT_ID(fontspec)].bitmap,
+                           x, y, text, fontspec);
+}
+#endif
+
+/* Compose translated RBF menu fragments without changing internal names.
+ * The returned text uses the shipped single-byte font mapping, not UTF-8.
+ * Do not remap Canon fonts here: callers retain their original fontspec.
+ */
+const char *bmp_translate_string(uint32_t fontspec, const char *text)
+{
+#ifdef CONFIG_MENU_RU
+    if (FONT_ID(fontspec) == FONT_ID(FONT_CANON)) return text;
+    return menu_ru_display(text, &fontspec);
+#else
+    return text;
+#endif
+}
+
+#ifdef CONFIG_MENU_RU
+#include "menu_ru_runtime.h"
+#endif
+
+/* Translate only the generated finite display patterns. Original buffers,
+ * file data, config names and diagnostic logs are never modified. */
+const char *bmp_translate_dynamic(uint32_t fontspec, const char *text,
+                                 char *buffer, size_t capacity)
+{
+#ifdef CONFIG_MENU_RU
+    const char *gate = "ON";
+    if (bmp_translate_string(fontspec, gate) == gate || !buffer || !capacity) return text;
+    uintptr_t source = (uintptr_t)text, target = (uintptr_t)buffer;
+    size_t length = strlen(text) + 1;
+    if (target <= source ? source - target < capacity : target - source < length) return text;
+    if (menu_ru_compose(text, buffer, capacity, 0, 0)) return buffer;
+#endif
+    return text;
+}
+
+/* Format only four approved config messages after their original expansion.
+ * Caller owns the output. Paths/preset names are arguments, never formats.
+ * Return the original on font/language fallback or insufficient capacity.
+ */
+const char *bmp_translate_config_message(uint32_t fontspec, const char *text,
+                                       char *buffer, size_t capacity)
+{
+    const char *format = 0;
+    const char *arg = 0;
+    char first[9], second[9];
+    const char *prefix = "Only the current preset: ";
+    if (!strncmp(text, prefix, strlen(prefix)))
+    {
+        format = "Only the current preset: %s";
+        arg = text + strlen(prefix);
+    }
+    else if (!strncmp(text, "Config: ", 8))
+    {
+        format = "Config: %s";
+        arg = text + 8;
+    }
+    else
+    {
+        prefix = "Restart to load the config for ";
+        size_t len = strlen(text), start = strlen(prefix);
+        const char *suffix = " mode.";
+        size_t end = strlen(suffix);
+        if (len > start + end && !strncmp(text, prefix, start) &&
+            !strcmp(text + len - end, suffix) && len - start - end < sizeof(first))
+        {
+            size_t n = len - start - end;
+            memcpy(first, text + start, n); first[n] = 0;
+            format = "Restart to load the config for %s mode.";
+            arg = first;
+        }
+        else
+        {
+            prefix = "Camera was started in ";
+            const char *middle = "; restart to load the config for ";
+            start = strlen(prefix);
+            if (len <= start || strncmp(text, prefix, start)) return text;
+            const char *split = strstr(text + start, middle);
+            if (!split || text[len-1] != '.') return text;
+            size_t a = split - (text + start);
+            const char *tail = split + strlen(middle);
+            size_t b = (text + len - 1) - tail;
+            if (!a || a >= sizeof(first) || !b || b >= sizeof(second)) return text;
+            memcpy(first, text + start, a); first[a] = 0;
+            memcpy(second, tail, b); second[b] = 0;
+            format = "Camera was started in %s; restart to load the config for %s.";
+        }
+    }
+    const char *translated = bmp_translate_string(fontspec, format);
+    if (translated == format || !buffer || !capacity) return text;
+    int count = arg ? snprintf(buffer, capacity, translated, arg)
+                    : snprintf(buffer, capacity, translated, first, second);
+    if (count < 0 || (size_t)count >= capacity) return text;
+    return buffer;
+}
+
+/* Parse only unsigned decimal fields from the four known menu values. */
+static int menu_ru_value_number(const char **cursor, int maximum)
+{
+    const char *p = *cursor;
+    int value = 0, digits = 0;
+    while (*p >= '0' && *p <= '9')
+    {
+        if (++digits > 3) return -1;
+        value = value * 10 + *p++ - '0';
+    }
+    if (!digits || value > maximum) return -1;
+    *cursor = p;
+    return value;
+}
+
+/* Display-only composition, scoped by the original menu entry name.
+ * Unknown strings and unsupported fonts retain the original English value.
+ * Only catalog formats selected below are passed to snprintf.
+ */
+const char *bmp_translate_menu_value(uint32_t fontspec, const char *name,
+                                   const char *text, char *buffer, size_t capacity)
+{
+    const char *format = 0, *first = "", *second = "", *third = "";
+    int a = 0, b = 0, numeric = 0;
+    if (!buffer || !capacity) return text;
+    /* Gate all fragments together, so fallback cannot leave mixed encodings. */
+    const char *gate = "ON";
+    if (bmp_translate_string(fontspec, gate) == gate) return text;
+    if (!strcmp(name, "Zebras"))
+    {
+        const char *comma = strstr(text, ", ");
+        if (!comma) return text;
+        size_t n = comma - text;
+        if (n == 4 && !strncmp(text, "Luma", n)) first = "Luma";
+        else if (n == 3 && !strncmp(text, "RGB", n)) first = "RGB";
+        else if (n == 8 && !strncmp(text, "LumaFast", n)) first = "LumaFast";
+        else return text;
+        const char *p = comma + 2;
+        if (!strncmp(p, "over ", 5))
+        {
+            p += 5; a = menu_ru_value_number(&p, 100);
+            if (a < 70 || strcmp(p, "%")) return text;
+            format = "%s, over %d%%"; numeric = 1;
+        }
+        else if (!strncmp(p, "under ", 6))
+        {
+            p += 6; a = menu_ru_value_number(&p, 20);
+            if (a < 0 || strcmp(p, "%")) return text;
+            format = "%s, under %d%%"; numeric = 1;
+        }
+        else
+        {
+            a = menu_ru_value_number(&p, 20);
+            if (a < 1 || strncmp(p, "..", 2)) return text;
+            p += 2; b = menu_ru_value_number(&p, 100);
+            if (b < 70 || strcmp(p, "%")) return text;
+            format = "%s, %d..%d%%"; numeric = 2;
+        }
+    }
+    else if (!strcmp(name, "Focus Peak"))
+    {
+        if (strncmp(text, "ON,", 3)) return text;
+        const char *p = text + 3;
+        a = menu_ru_value_number(&p, 5);
+        if (a < 0 || *p++ != '.') return text;
+        b = menu_ru_value_number(&p, 9);
+        if (b < 0 || a * 10 + b < 1 || a * 10 + b > 50 || *p++ != ',') return text;
+        if (!strncmp(p, "global", 6)) { first = "global"; p += 6; }
+        else if (!strncmp(p, "local", 5)) { first = "local"; p += 5; }
+        else if (*p && strchr("RGBCMY", *p))
+        {
+            first = *p == 'R' ? "R" : *p == 'G' ? "G" : *p == 'B' ? "B" :
+                    *p == 'C' ? "C" : *p == 'M' ? "M" : "Y";
+            p++;
+        }
+        else return text;
+        if (!strcmp(p, ",Gray")) second = ",Gray";
+        else if (*p) return text;
+        format = "ON,%d.%d,%s%s"; numeric = 3;
+    }
+    else if (!strcmp(name, "Spotmeter"))
+    {
+        const char *suffix = strstr(text, ", AFbox");
+        size_t n = suffix ? (size_t)(suffix - text) : strlen(text);
+        if (suffix && strcmp(suffix, ", AFbox")) return text;
+        if (n == 7 && !strncmp(text, "Percent", n)) first = "Percent";
+        else if (n == 6 && !strncmp(text, "0..255", n)) first = "0..255";
+        else if (n == 3 && !strncmp(text, "RGB", n)) first = "RGB";
+        else if (n == 3 && !strncmp(text, "RAW", n)) first = "RAW";
+        else if (n == 11 && !strncmp(text, "Percent RGB", n)) first = "Percent RGB";
+        else return text;
+        second = suffix ? ", AFbox" : "";
+        format = "%s%s";
+    }
+    else if (!strcmp(name, "Histogram"))
+    {
+        const char *suffix = strstr(text, ", ");
+        size_t n = suffix ? (size_t)(suffix - text) : strlen(text);
+        if (n == 10 && !strncmp(text, "Luma (YUV)", n)) first = "Luma (YUV)";
+        else if (n == 9 && !strncmp(text, "RGB (YUV)", n)) first = "RGB (YUV)";
+        else if (n == 7 && !strncmp(text, "RAW N/A", n)) first = "RAW N/A";
+        else if (n == 7 && !strncmp(text, "RAW RGB", n)) first = "RAW RGB";
+        else if (n == 12 && !strncmp(text, "RAW HistoBar", n)) first = "RAW HistoBar";
+        else return text;
+        if (suffix && !strcmp(suffix, ", Linear")) second = ", Linear";
+        else if (suffix && !strcmp(suffix, ", Log")) second = ", Log";
+        else if (suffix || strcmp(first, "RAW HistoBar")) return text;
+        format = "%s%s";
+    }
+    else return text;
+    first = bmp_translate_string(fontspec, first);
+    second = bmp_translate_string(fontspec, second);
+    third = bmp_translate_string(fontspec, format);
+    int count;
+    if (numeric == 1) count = snprintf(buffer, capacity, third, first, a);
+    else if (numeric == 2) count = snprintf(buffer, capacity, third, first, a, b);
+    else if (numeric == 3) count = snprintf(buffer, capacity, third, a, b, first, second);
+    else count = snprintf(buffer, capacity, "%s%s", first, second);
+    if (count < 0 || (size_t)count >= capacity) return text;
+    return buffer;
+}
+
+/* Summary is a separate translation scope: it can equal a module's Name.
+ * Translate only the help line, leaving metadata and module names untouched.
+ */
+const char *bmp_translate_module_summary(uint32_t fontspec, const char *text)
+{
+#ifdef CONFIG_MENU_RU
+    if (!menu_language_ru) return text;
+    uint32_t id = FONT_ID(fontspec);
+    if (id > FONT_ID(FONT_LARGE)) return text;
+    font *f = (font *)font_dynamic[id].bitmap;
+    if (!f || !f->cTable || f->hdr.charLast < 225) return text;
+    return module_ru_summary_lookup(text);
+#else
+    return text;
+#endif
+}
+
+/* Display names only; never pass module IDs, filenames or paths here. */
+const char *bmp_translate_module_name(uint32_t fontspec, const char *text)
+{
+#ifdef CONFIG_MENU_RU
+    if (!menu_language_ru) return text;
+    uint32_t id = FONT_ID(fontspec);
+    if (id > FONT_ID(FONT_LARGE)) return text;
+    font *f = (font *)font_dynamic[id].bitmap;
+    if (!f || !f->cTable || f->hdr.charLast < 225) return text;
+    return module_ru_name_lookup(text);
+#else
+    return text;
+#endif
+}
+
 //~ int bmp_enabled = 1;
 
 #ifdef CONFIG_VXWORKS
@@ -370,6 +661,31 @@ inline void bmp_putpixel_fast(uint8_t *const bvram, int x, int y, uint8_t color)
 #define USE_LUT
 #endif
 
+#ifdef CONFIG_MENU_RU
+static __attribute__((noinline)) int menu_ru_dynamic_draw(uint32_t fontspec,
+                                                        int x, int y, const char *text)
+{
+    char buffer[128];
+    if (FONT_ID(fontspec) == FONT_ID(FONT_CANON))
+        fontspec = (fontspec & ~0x00070000) | (FONT_ID(FONT_LARGE) << 16);
+    const char *translated = bmp_translate_dynamic(fontspec, text, buffer, sizeof(buffer));
+    if (translated == text) return -1;
+    return rbf_draw_string((void*)font_dynamic[FONT_ID(fontspec)].bitmap,
+                           x, y, buffer, fontspec);
+}
+
+static __attribute__((noinline)) int menu_ru_dynamic_width(uint32_t fontspec,
+                                                         const char *text)
+{
+    char buffer[128];
+    if (FONT_ID(fontspec) == FONT_ID(FONT_CANON))
+        fontspec = (fontspec & ~0x00070000) | (FONT_ID(FONT_LARGE) << 16);
+    const char *translated = bmp_translate_dynamic(fontspec, text, buffer, sizeof(buffer));
+    if (translated == text) return -1;
+    return rbf_str_width((void*)font_dynamic[FONT_ID(fontspec)].bitmap, translated);
+}
+#endif
+
 int
 bmp_puts(
         uint32_t fontspec,
@@ -378,13 +694,25 @@ bmp_puts(
         const char *s
 )
 {
+    #ifdef CONFIG_MENU_RU
+    const char *translated = menu_ru_display(s, &fontspec);
+    #endif
     *x = COERCE(*x, BMP_W_MINUS, BMP_W_PLUS);
     *y = COERCE(*y, BMP_H_MINUS, BMP_H_PLUS);
     
     uint32_t fg_color = fontspec_fg(fontspec);
     uint32_t bg_color = fontspec_bg(fontspec);
     
-    int len = rbf_draw_string((void*)font_dynamic[FONT_ID(fontspec)].bitmap,
+    int len;
+    #ifdef CONFIG_MENU_RU
+    if (translated != s)
+        len = menu_ru_draw(FONT(fontspec, fg_color, bg_color), *x, *y, translated);
+    else if (menu_language_ru &&
+             (len = menu_ru_dynamic_draw(FONT(fontspec, fg_color, bg_color), *x, *y, s)) >= 0)
+    { /* composed in per-call writable storage */ }
+    else
+    #endif
+        len = rbf_draw_string((void*)font_dynamic[FONT_ID(fontspec)].bitmap,
                               *x, *y, s, FONT(fontspec, fg_color, bg_color));
     *x += len;
     return len;
@@ -482,8 +810,35 @@ big_bmp_printf(
     return ans;
 }
 
+/* Numeric caret positions are indexed in the original ASCII value. */
+int bmp_literal_width(int fontspec, const char *text)
+{
+    return rbf_str_width((void*)font_dynamic[FONT_ID(fontspec)].bitmap, text);
+}
+
+int bmp_draw_literal(uint32_t fontspec, int x, int y, const char *text)
+{
+    char writable[128];
+    size_t length = strlen(text);
+    if (length >= sizeof(writable)) return 0;
+    memcpy(writable, text, length+1);
+    return rbf_draw_string((void*)font_dynamic[FONT_ID(fontspec)].bitmap,
+                           x, y, writable, fontspec);
+}
+
 int bmp_string_width(int fontspec, const char* str)
 {
+    #ifdef CONFIG_MENU_RU
+    const char *original = str;
+    uint32_t translated_font = fontspec;
+    str = menu_ru_display(str, &translated_font);
+    if (str == original && menu_language_ru)
+    {
+        int width = menu_ru_dynamic_width(fontspec, str);
+        if (width >= 0) return width;
+    }
+    fontspec = translated_font;
+    #endif
     return rbf_str_width((void*)font_dynamic[FONT_ID(fontspec)].bitmap, str);
 }
 

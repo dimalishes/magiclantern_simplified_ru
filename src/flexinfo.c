@@ -230,9 +230,10 @@ info_elem_t info_config_photo[] =
     { .string = { { INFO_TYPE_STRING, { 28, 3, 2, .name = "Lens", .user_disable = 1 }}, INFO_STRING_LENS, COLOR_FG_NONLV, INFO_COL_BG, INFO_FONT_MEDIUM } },
     { .string = { { INFO_TYPE_STRING, { 693, 459, 2, .name = "Copyright", .user_disable = 1, .anchor_flags_self = INFO_ANCHOR_RIGHT }}, INFO_STRING_COPYRIGHT, COLOR_FG_NONLV, INFO_COL_BG, INFO_FONT_MEDIUM } },
 
-    /* entry 16, free space */
+    /* entry 16, free space. Use RBF numbers to match measured glyph bounds;
+     * reserve a real gap before the translated unit label. */
     { .text = { { INFO_TYPE_TEXT, { 144, 162, 2, .anchor_flags_self = (INFO_ANCHOR_RIGHT | INFO_ANCHOR_BOTTOM), .name = "GB" }}, "GB", COLOR_CYAN, INFO_COL_PEEK, INFO_FONT_MEDIUM } },
-    { .string = { { INFO_TYPE_STRING, { 0, 2, 2, INFO_ANCHOR_LEFT | INFO_ANCHOR_BOTTOM, 16, INFO_ANCHOR_RIGHT | INFO_ANCHOR_BOTTOM, .name = "Space" }}, INFO_STRING_FREE_GB_FLOAT, COLOR_CYAN, INFO_COL_PEEK, INFO_FONT_CANON } },
+    { .string = { { INFO_TYPE_STRING, { -4, 2, 2, INFO_ANCHOR_LEFT | INFO_ANCHOR_BOTTOM, 16, INFO_ANCHOR_RIGHT | INFO_ANCHOR_BOTTOM, .name = "Space" }}, INFO_STRING_FREE_GB_FLOAT, COLOR_CYAN, INFO_COL_PEEK, INFO_FONT_LARGE } },
 
     /* entry 18, clock */
     { .string = { { INFO_TYPE_STRING, { 38, 250, 2, .name = "Hrs" }}, INFO_STRING_TIME_HH24, COLOR_CYAN, INFO_COL_PEEK, INFO_FONT_LARGE } },

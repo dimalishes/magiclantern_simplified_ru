@@ -299,7 +299,20 @@ fontspec_width(uint32_t fontspec)
 
 int bmp_printf( uint32_t fontspec, int x, int y, const char* fmt, ... );    /* returns width in pixels */
 int big_bmp_printf( uint32_t fontspec, int x, int y, const char* fmt, ... ); /* this one accepts larger strings */
+/* Original bytes for numeric caret editing; no display substitution. */
+int bmp_literal_width(int fontspec, const char *text);
+int bmp_draw_literal(uint32_t fontspec, int x, int y, const char *text);
 int bmp_string_width(int fontspec, const char* str);                  /* string width in pixels, with a given font */
+/* Display-only RBF fragment, with language/font fallback; never an internal ID. */
+const char *bmp_translate_string(uint32_t fontspec, const char *text);
+const char *bmp_translate_module_summary(uint32_t fontspec, const char *text);
+const char *bmp_translate_module_name(uint32_t fontspec, const char *text);
+const char *bmp_translate_menu_value(uint32_t fontspec, const char *name,
+                                   const char *text, char *buffer, size_t capacity);
+const char *bmp_translate_dynamic(uint32_t fontspec, const char *text,
+                                 char *buffer, size_t capacity);
+const char *bmp_translate_config_message(uint32_t fontspec, const char *text,
+                                       char *buffer, size_t capacity);
 int bmp_strlen_clipped(int fontspec, const char* str, int maxlen);    /* string len (in chars), if you want to clip at maxlen pix */
 
 extern void

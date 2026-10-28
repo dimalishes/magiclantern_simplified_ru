@@ -34,33 +34,47 @@
 
 extern int menu_help_active;
 static int current_page = 1;
-static int help_pages = 100; // dummy value, will be updated on the fly
+static int help_pages = 1;
+static const char *help_directory = "ML/doc";
 
-void 
+#ifdef CONFIG_MENU_RU
+extern int menu_language_ru;
+#endif
+
+static const char *menu_help_directory(void)
+{
+    uint32_t size;
+#ifdef CONFIG_MENU_RU
+    if (menu_language_ru && FIO_GetFileSize("ML/doc/ru/menuidx.dat", &size) == 0 && size)
+        return "ML/doc/ru";
+#endif
+    if (FIO_GetFileSize("ML/doc/en/menuidx.dat", &size) == 0 && size)
+        return "ML/doc/en";
+    return "ML/doc"; /* legacy card layout */
+}
+
+void
 draw_beta_warning()
 {
     bmp_fill(COLOR_BLACK, 0, 0, 720, 480);
+    bmp_printf(FONT_LARGE | FONT_ALIGN_CENTER, 360, 53, "Magic Lantern RU");
+    bmp_printf(FONT_MED | FONT_ALIGN_CENTER, 360, 130,
+        "This is a Russian-localized Magic Lantern by dimalishes");
+    bmp_printf(FONT_MED | FONT_ALIGN_CENTER, 360, 180,
+        "Tested on a personal 5D MK2 camera");
+    /* Preserve the approved sentence, wrapping it within the 720-pixel screen. */
+    bmp_printf(FONT_MED | FONT_ALIGN_CENTER, 360, 230,
+        "Be careful when using it");
+    bmp_printf(FONT_MED | FONT_ALIGN_CENTER, 360, 257,
+        "for important shoots.");
+    bmp_printf(FONT_MED | FONT_ALIGN_CENTER, 360, 308, "Enjoy!");
+    bmp_printf(FONT_MED | FONT_ALIGN_CENTER, 360, 355,
+        "(Press any camera button to enter ML settings)");
 
-    bmp_printf(FONT_CANON, 242, 53, "Magic Lantern");
-
-    bmp_printf(FONT_MED | FONT_ALIGN_CENTER, 360, 150, "This is a development snapshot for testing purposes.");
-
-    bmp_printf(FONT_MED | FONT_ALIGN_CENTER, 360, 200, "Please report all bugs at www.magiclantern.fm.");
-
-    bmp_printf(FONT_MED | FONT_ALIGN_CENTER, 360, 250, "Be careful using it for production work.      ");
-
-    bmp_printf(FONT_MED | FONT_ALIGN_CENTER, 360, 300, "Enjoy!");
-    
-    bmp_printf(FONT_MED | FONT_ALIGN_CENTER, 360, 350, "(Press any camera button to enter ML settings)");
-
-    big_bmp_printf(FONT_MED,  10,  410,
-        "Magic Lantern version: %s\n"
-        "Git commit: %s\n"
-        "Built on %s by %s.",
-        build_version,
-        build_id,
-        build_date,
-        build_user);
+    /* Separate bounded lines keep all metadata visible and translatable. */
+    bmp_printf(FONT_MED, 10, 410, "Magic Lantern version: %s", build_version);
+    bmp_printf(FONT_MED, 10, 433, "Git commit: %s", build_id);
+    bmp_printf(FONT_MED, 10, 456, "Built on %s by %s.", build_date, build_user);
 }
 
 void 
@@ -111,16 +125,16 @@ void menu_help_show_page(int page)
     struct bmp_file_t * doc = (void*) -1;
 
 #ifdef CONFIG_HELP_CACHE
-    char rpath[30];
-    snprintf(rpath, sizeof(rpath), "ML/doc/page-%03d.vrm", page);
+    char rpath[64];
+    snprintf(rpath, sizeof(rpath), "%s/page-%03d.vrm", help_directory, page);
     if (load_vram(rpath)==-1)
 #endif
     {
-        snprintf(path, sizeof(path), "ML/doc/page-%03d.bmh", page);
+        snprintf(path, sizeof(path), "%s/page-%03d.bmh", help_directory, page);
         doc = bmp_load(path, 1);
         if (!doc)
         {
-            snprintf(path, sizeof(path), "ML/doc/page-%03d.bmp", page);
+            snprintf(path, sizeof(path), "%s/page-%03d.bmp", help_directory, page);
             doc = bmp_load(path, 1);
         }
 
@@ -169,60 +183,56 @@ void str_make_lowercase(char* s)
     while (*s) { *s = tolower(*s); s++; }
 }
 
-void menu_help_go_to_label(void* label, int delta)
+/* One language directory supplies both the index and every page/cache file. */
+int menu_help_try_label(const char *label)
 {
-    int page = 0; // if help page won't be found, will show 404
-    if (is_menu_selected("Help"))
-        page = 1; // don't show the 404 page in Help menu :P
-    
+    help_directory = menu_help_directory();
+    help_pages = 1;
+    char path[64];
+    snprintf(path, sizeof(path), "%s/menuidx.dat", help_directory);
     int size = 0;
-
-    if (label == NULL)
-        DryosDebugMsg(0, 15, "label was NULL");
-    else
-        DryosDebugMsg(0, 15, "label: %s", label);
-
-    char* buf = (void*)read_entire_file("ML/doc/menuidx.dat", &size);
-    if (!buf || !size)
-        page = -1; // show "help not found" warning
-    
-    // trim spaces
+    char *buf = (void*)read_entire_file(path, &size);
+    int page = (!buf || size <= 0) ? -1 : 0;
     char label_adj[100];
-    label_adj[0] = '\0';
-    if (label != NULL)
-    {   // this snprintf() implementation is not safe with NULL pointers
-        snprintf(label_adj, sizeof(label_adj), "%s", label);
-    }
-    int i = strlen(label_adj);
-    while (i > 0 && label_adj[i - 1] == ' ')
-    {
-        label_adj[i - 1] = '\0';
-        i--;
-    }
+    snprintf(label_adj, sizeof(label_adj), "%s", label ? label : "");
+    int len = strlen(label_adj);
+    while (len && label_adj[len-1] == ' ') label_adj[--len] = 0;
     str_make_lowercase(label_adj);
 
-    int prev = -1;
-    for (i = 0; i < size; i++)
+    /* The index is ASCII, with exactly three page digits and one separator.
+     * Accept a final line without LF, and never write past read_entire_file. */
+    int start = 0;
+    for (int i = 0; buf && i <= size; i++)
     {
-        if (buf[i] == '\n')
+        if (i < size && buf[i] != '\n') continue;
+        int count = i - start;
+        const char *line = buf + start;
+        if (count >= 5 && count < 104 && line[3] == ' ' &&
+            line[0] >= '0' && line[0] <= '9' &&
+            line[1] >= '0' && line[1] <= '9' &&
+            line[2] >= '0' && line[2] <= '9')
         {
-            buf[i] = 0;
-            char* line_buf = &buf[prev+1];
-
-            char* name = line_buf+4;
+            int number = (line[0]-'0')*100 + (line[1]-'0')*10 + line[2]-'0';
+            char name[100];
+            memcpy(name, line+4, count-4); name[count-4] = 0;
+            int n = strlen(name);
+            while (n && (name[n-1] == '\r' || name[n-1] == ' ')) name[--n] = 0;
             str_make_lowercase(name);
-            int pagenum = atoi(line_buf);
-
-            if(streq(name, label_adj))
-                page = pagenum;
-            help_pages = MAX(help_pages, pagenum);
-
-            prev = i;
+            if (number > 0)
+            {
+                help_pages = MAX(help_pages, number);
+                if (streq(name, label_adj)) page = number;
+            }
         }
+        start = i+1;
     }
-
-    fio_free(buf);
-    
+    if (buf) fio_free(buf);
     current_page = page;
     menu_help_active = 1;
+    return page > 0;
+}
+
+void menu_help_go_to_label(void *label, int delta)
+{
+    menu_help_try_label(label);
 }

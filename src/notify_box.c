@@ -11,6 +11,7 @@
 #include "config.h"
 #include "gui.h"
 #include "lens.h"
+#include "font.h"
 
 static struct semaphore * notify_box_show_sem = 0;
 static struct semaphore * notify_box_main_sem = 0;
@@ -44,7 +45,27 @@ static void NotifyBox_task(void* priv)
                 redraw();
                 notify_box_dirty = 0;
             }
-            bmp_printf(FONT_LARGE,  50,  50, notify_box_msg);
+            int notification_font = FONT_LARGE;
+            const char *display = notify_box_msg;
+#ifdef CONFIG_MENU_RU
+            char translated[128];
+            display = bmp_translate_config_message(notification_font, notify_box_msg,
+                                                   translated, sizeof(translated));
+            /* Keep long translated notifications inside the screen without
+             * distorting individual glyphs. Early boot may not have fonts. */
+            if (font_dynamic[FONT_ID(FONT_LARGE)].bitmap &&
+                font_dynamic[FONT_ID(FONT_MED_LARGE)].bitmap &&
+                font_dynamic[FONT_ID(FONT_MED)].bitmap)
+            {
+                if (bmp_string_width(notification_font, display) > 670)
+                    notification_font = FONT_MED_LARGE;
+                if (bmp_string_width(notification_font, display) > 670)
+                    notification_font = FONT_MED;
+            }
+            display = bmp_translate_config_message(notification_font, notify_box_msg,
+                                                   translated, sizeof(translated));
+#endif
+            bmp_printf(notification_font,  50,  50, "%s", display);
             msleep(50);
             if (notify_box_stop_request)
                 break;

@@ -3,6 +3,7 @@
 
 void menu_help_go_to_page(int page);
 void menu_help_go_to_label(void* label, int delta);
+int menu_help_try_label(const char *label);
 void menu_help_section_print(
         void *                  priv,
         int                     x,

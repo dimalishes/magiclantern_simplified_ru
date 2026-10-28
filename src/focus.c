@@ -256,6 +256,11 @@ display_lens_hyperfocal()
     unsigned        menu_font = MENU_FONT;
     unsigned        font = FONT(FONT_MED, FONT_FG(menu_font), FONT_BG(menu_font));
     unsigned        height = fontspec_height( font );
+    /* These are translated display strings; bound each independent column.
+     * Keep a gap before the next column and before the diffraction panel. */
+    unsigned left_font = font | FONT_TEXT_WIDTH(272u);
+    unsigned right_font = font | FONT_TEXT_WIDTH(208u);
+    unsigned header_font = font | FONT_TEXT_WIDTH(688u);
 
     int x = 10;
     int y = 328;
@@ -266,13 +271,13 @@ display_lens_hyperfocal()
     if (!lens_info.lens_exists)
     {
         y += height;
-        bmp_printf( font, x, y,
+        bmp_printf( header_font, x, y,
             "Lens: manual (without chip)."
         );
         return;
     }
 
-    bmp_printf( font, x, y,
+    bmp_printf( header_font, x, y,
         "Lens: %s, %dmm f/%d.%d",
         lens_info.name,
         lens_info.focal_len, 
@@ -283,7 +288,7 @@ display_lens_hyperfocal()
     if (!lens_info.focus_dist)
     {
         y += height;
-        bmp_printf( font, x, y,
+        bmp_printf( header_font, x, y,
             "Your lens does not report focus distance."
         );
         return;
@@ -291,7 +296,7 @@ display_lens_hyperfocal()
 
     y += height;
 
-    bmp_printf( font, x, y,
+    bmp_printf( left_font, x, y,
         "Focus dist: %s",
         lens_info.focus_dist == 0xFFFF
                         ? " Infty"
@@ -299,20 +304,20 @@ display_lens_hyperfocal()
     );
 
     y += height;
-    bmp_printf( font, x, y,
+    bmp_printf( left_font, x, y,
         "Hyperfocal: %s",
         lens_format_dist( lens_info.hyperfocal )
     );
 
     x += 280;
     y -= height;
-    bmp_printf( font, x, y,
+    bmp_printf( right_font, x, y,
         "DOF Near:   %s",
         lens_format_dist( lens_info.dof_near )
     );
 
     y += height;
-    bmp_printf( font, x, y,
+    bmp_printf( right_font, x, y,
         "DOF Far:    %s",
         lens_info.dof_far >= 1000*1000
             ? " Infty"
@@ -324,7 +329,7 @@ display_lens_hyperfocal()
 
     y += height;
     int fg = lens_info.dof_flags & DOF_DIFFRACTION_LIMIT_REACHED ? COLOR_YELLOW : COLOR_WHITE;
-    bmp_printf( FONT(font,fg,COLOR_BLACK) | FONT_ALIGN_RIGHT, x, y, 
+    bmp_printf( FONT(font,fg,COLOR_BLACK) | FONT_ALIGN_RIGHT | FONT_TEXT_WIDTH(192u), x, y,
         "Diffraction\n"
         "blur: %d"SYM_MICRO"m",
         lens_info.dof_diffraction_blur

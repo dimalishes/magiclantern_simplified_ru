@@ -1476,6 +1476,14 @@ static MENU_UPDATE_FUNC(module_menu_update_entry)
             MENU_SET_NAME(module_list[mod_number].name);
         }
 
+        const char *display_name = module_get_string(mod_number, "Name");
+        if (display_name)
+        {
+            const char *translated = bmp_translate_module_name(FONT_LARGE, display_name);
+            if (translated != display_name)
+                MENU_SET_NAME("%s", translated);
+        }
+
         if (!module_list[mod_number].enabled)
         {
             MENU_SET_ICON(MNI_NEUTRAL, 0);
@@ -1575,6 +1583,12 @@ static MENU_UPDATE_FUNC(module_menu_update_entry)
         {
             int has_dot = summary[strlen(summary)-1] == '.';
             MENU_SET_HELP("%s%s", summary, has_dot ? "" : ".");
+            if (entry->selected)
+            {
+                const char *translated = bmp_translate_module_summary(FONT_MED, info->help);
+                if (translated != info->help)
+                    MENU_SET_HELP("%s", translated);
+            }
         }
 
         if (module_list[mod_number].valid == module_list[mod_number].enabled)
@@ -1585,7 +1599,8 @@ static MENU_UPDATE_FUNC(module_menu_update_entry)
                 int fg = COLOR_GRAY(40);
                 int bg = COLOR_BLACK;
                 int fnt = SHADOW_FONT(FONT(FONT_MED_LARGE, fg, bg));
-                bmp_printf(fnt | FONT_ALIGN_RIGHT | FONT_TEXT_WIDTH(340), 680, info->y+2, "%s", name);
+                bmp_printf(fnt | FONT_ALIGN_RIGHT | FONT_TEXT_WIDTH(340), 680, info->y+2, "%s",
+                           bmp_translate_module_name(fnt, name));
             }
         }
     }
@@ -1771,7 +1786,8 @@ static int module_show_about_page(int mod_number)
 
             int fnt_special = FONT(FONT_MED, COLOR_CYAN, COLOR_BLACK);
 
-            bmp_printf(FONT_LARGE, 10, 10, "%s", name);
+            bmp_printf(FONT_LARGE, 10, 10, "%s",
+                       bmp_translate_module_name(FONT_LARGE, name));
             big_bmp_printf(FONT_MED | FONT_ALIGN_JUSTIFIED | FONT_TEXT_WIDTH(690), 10, 60, "%s", desc);
 
             int xm = 710 - max_width_value * font_med.width;

@@ -1,3 +1,14 @@
+# Magic Lantern RU — dimalishes
+
+Русификация Magic Lantern для Canon EOS 5D Mark II / Canon 2.1.2.
+
+[Описание на русском](README-RU.md) · [Сборка](BUILD-RU.md) · [Проверка на камере](CAMERA-TEST-RU.md)
+
+База: `ed3e7c0dfacfdeaf3349dee73edf9e3621217462`. Лицензия и авторство Magic Lantern сохранены.
+Другие модели с русификацией пока не проверялись.
+
+---
+
 Magic Lantern
 =============
 

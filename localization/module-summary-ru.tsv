@@ -1,0 +1,20 @@
+# Only module Summary help lines, never module names.
+Advanced ramping and exposure control for the intervalometer.	Интервалометр: плавная настройка параметров и экспозиции.
+Arkanoid game.	Игра Arkanoid.
+Auto exposure algorithm.	Алгоритм автоэкспозиции.
+Benchmarks (speed tests).	Тесты быстродействия.
+Turn the 1080p and 720p video modes into 1:1 sensor crop modes.	Видео 1080p/720p с кропом сенсора 1:1.
+Post deflicker sidecar files.	Файлы XMP/UFRaw для устранения мерцания при обработке.
+EDMAC reverse engineering and diagnostic tools.	Инструменты исследования и диагностики EDMAC.
+Autofocus fine-tuning.	Точная настройка автофокуса.
+Dynamic range improvement by using two ISOs in one picture.	Расширение динамического диапазона: два ISO в одном кадре.
+Expose To The Right - auto exposure that minimizes noise.	ETTR: автоэкспозиция для снижения шума.
+File manager (browse the files on the card).	Просмотр файлов на карте памяти.
+Customize Canon's image file naming (IMG_1234.CR2 -> ABCD1234.CR2).	Имена файлов Canon: IMG_1234.CR2 -> ABCD1234.CR2.
+Lua scripting.	Выполнение скриптов Lua.
+Image viewer that integrates with the file manager.	Просмотр изображений из файлового менеджера.
+Records 14-bit RAW video.	Запись 14-битного RAW-видео.
+Play MLV/RAW.	Воспроизведение MLV/RAW.
+Adds sound recording functionality to mlv_rec.	Запись звука для mlv_rec.
+Stability tests.	Тесты стабильности.
+Take pictures in LiveView without shutter actuation.	Съёмка в LiveView без срабатывания затвора.

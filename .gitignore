@@ -78,3 +78,8 @@ developer_guide/developer_guide.html
 developer_guide/developer_guide.pdf
 
 syntax: regexp
+
+# Generated Russian help previews and reports
+tools/ru-help/preview/
+tools/ru-help/pages.json
+__pycache__/
