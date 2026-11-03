@@ -1,3 +1,4 @@
+![logo](doc/Logo.png)
 # Magic Lantern RU
 
 Русификация Magic Lantern для Canon EOS 5D Mark II / Canon 2.1.2.
